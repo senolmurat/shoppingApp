@@ -8,22 +8,59 @@
 
 /* Begin PBXBuildFile section */
 		D90692F8290FB39100BB779D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90692F7290FB39100BB779D /* AppDelegate.swift */; };
-		D90692FA290FB39100BB779D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90692F9290FB39100BB779D /* SceneDelegate.swift */; };
-		D90692FC290FB39100BB779D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90692FB290FB39100BB779D /* ViewController.swift */; };
+		D90692FC290FB39100BB779D /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90692FB290FB39100BB779D /* LaunchViewController.swift */; };
 		D90692FF290FB39100BB779D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D90692FD290FB39100BB779D /* Main.storyboard */; };
 		D9069301290FB39300BB779D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9069300290FB39300BB779D /* Assets.xcassets */; };
 		D9069304290FB39300BB779D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9069302290FB39300BB779D /* LaunchScreen.storyboard */; };
+		D906930E290FB5E200BB779D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D906930D290FB5E200BB779D /* GoogleService-Info.plist */; };
+		D9069311290FB68300BB779D /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = D9069310290FB68300BB779D /* FirebaseAuth */; };
+		D9069313290FB68300BB779D /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = D9069312290FB68300BB779D /* FirebaseDatabase */; };
+		D9069315290FB68300BB779D /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = D9069314290FB68300BB779D /* FirebaseFirestore */; };
+		D9069317290FB68300BB779D /* FirebaseRemoteConfig in Frameworks */ = {isa = PBXBuildFile; productRef = D9069316290FB68300BB779D /* FirebaseRemoteConfig */; };
+		D906931F290FB78500BB779D /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D906931A290FB78500BB779D /* AuthViewModel.swift */; };
+		D9069320290FB78500BB779D /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D906931C290FB78500BB779D /* AuthViewController.swift */; };
+		D9069321290FB78500BB779D /* AuthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D906931E290FB78500BB779D /* AuthViewController.xib */; };
+		D9069326290FC4C400BB779D /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9069324290FC4C400BB779D /* AlertManager.swift */; };
+		D9069327290FC4C400BB779D /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9069325290FC4C400BB779D /* FirebaseManager.swift */; };
+		D906933F290FC4CB00BB779D /* SpinerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9069329290FC4CB00BB779D /* SpinerViewController.swift */; };
+		D9069340290FC4CB00BB779D /* UIImageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D906932B290FC4CB00BB779D /* UIImageExtensions.swift */; };
+		D9069341290FC4CB00BB779D /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = D906932D290FC4CB00BB779D /* UIApplication.swift */; };
+		D9069342290FC4CB00BB779D /* UITableViewCellExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D906932F290FC4CB00BB779D /* UITableViewCellExtensions.swift */; };
+		D9069343290FC4CB00BB779D /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9069331290FC4CB00BB779D /* UIColor+Extensions.swift */; };
+		D9069344290FC4CB00BB779D /* UICollectionViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9069333290FC4CB00BB779D /* UICollectionViewExtensions.swift */; };
+		D9069345290FC4CB00BB779D /* UICollectionViewCellExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9069335290FC4CB00BB779D /* UICollectionViewCellExtensions.swift */; };
+		D9069346290FC4CB00BB779D /* UIImageViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9069337290FC4CB00BB779D /* UIImageViewExtensions.swift */; };
+		D9069347290FC4CB00BB779D /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D906933A290FC4CB00BB779D /* UIViewControllerExtensions.swift */; };
+		D9069348290FC4CB00BB779D /* UITableViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D906933C290FC4CB00BB779D /* UITableViewExtensions.swift */; };
+		D9069349290FC4CB00BB779D /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D906933E290FC4CB00BB779D /* StringExtensions.swift */; };
+		D906934C290FC5C400BB779D /* Toast in Frameworks */ = {isa = PBXBuildFile; productRef = D906934B290FC5C400BB779D /* Toast */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D90692F4290FB39100BB779D /* shoppingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = shoppingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D90692F7290FB39100BB779D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D90692F9290FB39100BB779D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D90692FB290FB39100BB779D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D90692FB290FB39100BB779D /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
 		D90692FE290FB39100BB779D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D9069300290FB39300BB779D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D9069303290FB39300BB779D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D9069305290FB39300BB779D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D906930D290FB5E200BB779D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D906931A290FB78500BB779D /* AuthViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		D906931C290FB78500BB779D /* AuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
+		D906931E290FB78500BB779D /* AuthViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AuthViewController.xib; sourceTree = "<group>"; };
+		D9069324290FC4C400BB779D /* AlertManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
+		D9069325290FC4C400BB779D /* FirebaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
+		D9069329290FC4CB00BB779D /* SpinerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpinerViewController.swift; sourceTree = "<group>"; };
+		D906932B290FC4CB00BB779D /* UIImageExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageExtensions.swift; sourceTree = "<group>"; };
+		D906932D290FC4CB00BB779D /* UIApplication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIApplication.swift; sourceTree = "<group>"; };
+		D906932F290FC4CB00BB779D /* UITableViewCellExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewCellExtensions.swift; sourceTree = "<group>"; };
+		D9069331290FC4CB00BB779D /* UIColor+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
+		D9069333290FC4CB00BB779D /* UICollectionViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UICollectionViewExtensions.swift; sourceTree = "<group>"; };
+		D9069335290FC4CB00BB779D /* UICollectionViewCellExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UICollectionViewCellExtensions.swift; sourceTree = "<group>"; };
+		D9069337290FC4CB00BB779D /* UIImageViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageViewExtensions.swift; sourceTree = "<group>"; };
+		D906933A290FC4CB00BB779D /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
+		D906933C290FC4CB00BB779D /* UITableViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewExtensions.swift; sourceTree = "<group>"; };
+		D906933E290FC4CB00BB779D /* StringExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +68,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9069313290FB68300BB779D /* FirebaseDatabase in Frameworks */,
+				D9069311290FB68300BB779D /* FirebaseAuth in Frameworks */,
+				D9069315290FB68300BB779D /* FirebaseFirestore in Frameworks */,
+				D906934C290FC5C400BB779D /* Toast in Frameworks */,
+				D9069317290FB68300BB779D /* FirebaseRemoteConfig in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,15 +98,191 @@
 		D90692F6290FB39100BB779D /* shoppingApp */ = {
 			isa = PBXGroup;
 			children = (
+				D9069322290FC4B800BB779D /* Core */,
+				D906930C290FB54B00BB779D /* Scenes */,
+				D906930B290FB54500BB779D /* Models */,
 				D90692F7290FB39100BB779D /* AppDelegate.swift */,
-				D90692F9290FB39100BB779D /* SceneDelegate.swift */,
-				D90692FB290FB39100BB779D /* ViewController.swift */,
+				D90692FB290FB39100BB779D /* LaunchViewController.swift */,
 				D90692FD290FB39100BB779D /* Main.storyboard */,
 				D9069300290FB39300BB779D /* Assets.xcassets */,
 				D9069302290FB39300BB779D /* LaunchScreen.storyboard */,
 				D9069305290FB39300BB779D /* Info.plist */,
+				D906930D290FB5E200BB779D /* GoogleService-Info.plist */,
 			);
 			path = shoppingApp;
+			sourceTree = "<group>";
+		};
+		D906930B290FB54500BB779D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D906930C290FB54B00BB779D /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				D9069318290FB78500BB779D /* Auth */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		D9069318290FB78500BB779D /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				D9069319290FB78500BB779D /* ViewModel */,
+				D906931B290FB78500BB779D /* Controller */,
+				D906931D290FB78500BB779D /* View */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		D9069319290FB78500BB779D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				D906931A290FB78500BB779D /* AuthViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		D906931B290FB78500BB779D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D906931C290FB78500BB779D /* AuthViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D906931D290FB78500BB779D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D906931E290FB78500BB779D /* AuthViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D9069322290FC4B800BB779D /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				D9069328290FC4CB00BB779D /* Extensions */,
+				D9069323290FC4C400BB779D /* Helpers */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		D9069323290FC4C400BB779D /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				D9069324290FC4C400BB779D /* AlertManager.swift */,
+				D9069325290FC4C400BB779D /* FirebaseManager.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		D9069328290FC4CB00BB779D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D9069329290FC4CB00BB779D /* SpinerViewController.swift */,
+				D906932A290FC4CB00BB779D /* UIImage */,
+				D906932C290FC4CB00BB779D /* UIApplication */,
+				D906932E290FC4CB00BB779D /* UITableViewCell */,
+				D9069330290FC4CB00BB779D /* UIColor */,
+				D9069332290FC4CB00BB779D /* UICollectionView */,
+				D9069334290FC4CB00BB779D /* UICollectionViewCell */,
+				D9069336290FC4CB00BB779D /* UIImageView */,
+				D9069338290FC4CB00BB779D /* Int */,
+				D9069339290FC4CB00BB779D /* UIViewController */,
+				D906933B290FC4CB00BB779D /* UITableView */,
+				D906933D290FC4CB00BB779D /* String */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		D906932A290FC4CB00BB779D /* UIImage */ = {
+			isa = PBXGroup;
+			children = (
+				D906932B290FC4CB00BB779D /* UIImageExtensions.swift */,
+			);
+			path = UIImage;
+			sourceTree = "<group>";
+		};
+		D906932C290FC4CB00BB779D /* UIApplication */ = {
+			isa = PBXGroup;
+			children = (
+				D906932D290FC4CB00BB779D /* UIApplication.swift */,
+			);
+			path = UIApplication;
+			sourceTree = "<group>";
+		};
+		D906932E290FC4CB00BB779D /* UITableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				D906932F290FC4CB00BB779D /* UITableViewCellExtensions.swift */,
+			);
+			path = UITableViewCell;
+			sourceTree = "<group>";
+		};
+		D9069330290FC4CB00BB779D /* UIColor */ = {
+			isa = PBXGroup;
+			children = (
+				D9069331290FC4CB00BB779D /* UIColor+Extensions.swift */,
+			);
+			path = UIColor;
+			sourceTree = "<group>";
+		};
+		D9069332290FC4CB00BB779D /* UICollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				D9069333290FC4CB00BB779D /* UICollectionViewExtensions.swift */,
+			);
+			path = UICollectionView;
+			sourceTree = "<group>";
+		};
+		D9069334290FC4CB00BB779D /* UICollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				D9069335290FC4CB00BB779D /* UICollectionViewCellExtensions.swift */,
+			);
+			path = UICollectionViewCell;
+			sourceTree = "<group>";
+		};
+		D9069336290FC4CB00BB779D /* UIImageView */ = {
+			isa = PBXGroup;
+			children = (
+				D9069337290FC4CB00BB779D /* UIImageViewExtensions.swift */,
+			);
+			path = UIImageView;
+			sourceTree = "<group>";
+		};
+		D9069338290FC4CB00BB779D /* Int */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Int;
+			sourceTree = "<group>";
+		};
+		D9069339290FC4CB00BB779D /* UIViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D906933A290FC4CB00BB779D /* UIViewControllerExtensions.swift */,
+			);
+			path = UIViewController;
+			sourceTree = "<group>";
+		};
+		D906933B290FC4CB00BB779D /* UITableView */ = {
+			isa = PBXGroup;
+			children = (
+				D906933C290FC4CB00BB779D /* UITableViewExtensions.swift */,
+			);
+			path = UITableView;
+			sourceTree = "<group>";
+		};
+		D906933D290FC4CB00BB779D /* String */ = {
+			isa = PBXGroup;
+			children = (
+				D906933E290FC4CB00BB779D /* StringExtensions.swift */,
+			);
+			path = String;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +301,13 @@
 			dependencies = (
 			);
 			name = shoppingApp;
+			packageProductDependencies = (
+				D9069310290FB68300BB779D /* FirebaseAuth */,
+				D9069312290FB68300BB779D /* FirebaseDatabase */,
+				D9069314290FB68300BB779D /* FirebaseFirestore */,
+				D9069316290FB68300BB779D /* FirebaseRemoteConfig */,
+				D906934B290FC5C400BB779D /* Toast */,
+			);
 			productName = shoppingApp;
 			productReference = D90692F4290FB39100BB779D /* shoppingApp.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +336,10 @@
 				Base,
 			);
 			mainGroup = D90692EB290FB39100BB779D;
+			packageReferences = (
+				D906930F290FB68300BB779D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				D906934A290FC5C400BB779D /* XCRemoteSwiftPackageReference "Toast-Swift" */,
+			);
 			productRefGroup = D90692F5290FB39100BB779D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -126,6 +355,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D9069304290FB39300BB779D /* LaunchScreen.storyboard in Resources */,
+				D906930E290FB5E200BB779D /* GoogleService-Info.plist in Resources */,
+				D9069321290FB78500BB779D /* AuthViewController.xib in Resources */,
 				D9069301290FB39300BB779D /* Assets.xcassets in Resources */,
 				D90692FF290FB39100BB779D /* Main.storyboard in Resources */,
 			);
@@ -138,9 +369,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D90692FC290FB39100BB779D /* ViewController.swift in Sources */,
+				D9069347290FC4CB00BB779D /* UIViewControllerExtensions.swift in Sources */,
+				D9069340290FC4CB00BB779D /* UIImageExtensions.swift in Sources */,
+				D906931F290FB78500BB779D /* AuthViewModel.swift in Sources */,
+				D9069345290FC4CB00BB779D /* UICollectionViewCellExtensions.swift in Sources */,
+				D9069342290FC4CB00BB779D /* UITableViewCellExtensions.swift in Sources */,
+				D90692FC290FB39100BB779D /* LaunchViewController.swift in Sources */,
+				D9069348290FC4CB00BB779D /* UITableViewExtensions.swift in Sources */,
+				D9069327290FC4C400BB779D /* FirebaseManager.swift in Sources */,
+				D9069326290FC4C400BB779D /* AlertManager.swift in Sources */,
+				D9069320290FB78500BB779D /* AuthViewController.swift in Sources */,
+				D9069343290FC4CB00BB779D /* UIColor+Extensions.swift in Sources */,
+				D9069344290FC4CB00BB779D /* UICollectionViewExtensions.swift in Sources */,
+				D9069349290FC4CB00BB779D /* StringExtensions.swift in Sources */,
+				D906933F290FC4CB00BB779D /* SpinerViewController.swift in Sources */,
 				D90692F8290FB39100BB779D /* AppDelegate.swift in Sources */,
-				D90692FA290FB39100BB779D /* SceneDelegate.swift in Sources */,
+				D9069341290FC4CB00BB779D /* UIApplication.swift in Sources */,
+				D9069346290FC4CB00BB779D /* UIImageViewExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,7 +461,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -270,7 +515,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -295,6 +540,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -323,6 +569,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -358,6 +605,53 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D906930F290FB68300BB779D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		D906934A290FC5C400BB779D /* XCRemoteSwiftPackageReference "Toast-Swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/scalessec/Toast-Swift.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D9069310290FB68300BB779D /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D906930F290FB68300BB779D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		D9069312290FB68300BB779D /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D906930F290FB68300BB779D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		D9069314290FB68300BB779D /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D906930F290FB68300BB779D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		D9069316290FB68300BB779D /* FirebaseRemoteConfig */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D906930F290FB68300BB779D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseRemoteConfig;
+		};
+		D906934B290FC5C400BB779D /* Toast */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D906934A290FC5C400BB779D /* XCRemoteSwiftPackageReference "Toast-Swift" */;
+			productName = Toast;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D90692EC290FB39100BB779D /* Project object */;
 }
