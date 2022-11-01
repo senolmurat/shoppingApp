@@ -13,6 +13,8 @@ extension UIViewController{
         DispatchQueue.main.async {
             let child = SpinnerViewController()
 
+            child.view.backgroundColor = .black
+            child.view.alpha = 0.4
             // add the spinner view self
             self.addChild(child)
             child.view.frame = self.view.frame

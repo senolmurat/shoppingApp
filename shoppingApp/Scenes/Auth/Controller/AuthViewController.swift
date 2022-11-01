@@ -45,20 +45,31 @@ final class AuthViewController: UIViewController {
     
     private let viewModel = AuthViewModel()
     
+    // MARK: View Lifecycle
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        // TODO: place an observer
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         viewModel.delegate = self
+        credentionTextField.text = "test@gmail.com"
         
-        
+        /*
         self.showLoadingIndicator()
         viewModel.fetchRemoteConfig { isSignUpDisabled in
             self.segmentedControl.isHidden = isSignUpDisabled
             self.dismissLoadingIndicator()
         }
+         */
     }
     
     @IBAction private func didTapLoginButton(_ sender: UIButton) {
+        
         guard let credential = credentionTextField.text,
               let password = passwordTextField.text else {
             return
@@ -74,6 +85,7 @@ final class AuthViewController: UIViewController {
             }
             viewModel.signUp(credential, password, username: username)
         }
+         
     }
     
     @IBAction private func didValueChangedSegmentedControl(_ sender: UISegmentedControl) {
@@ -93,12 +105,13 @@ extension AuthViewController: AuthDelegate {
     }
     
     func didSignedIn() {
-        /*
-        if let recentViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TabBarController") as? UITabBarController{
-            recentViewController.modalPresentationStyle = .fullScreen
-            self.present(recentViewController, animated: true)
-        }
-         */
+        
+        let mainVC = MainViewController()
+        UIApplication.shared.delegate?.window??.rootViewController = mainVC
+        mainVC.modalPresentationStyle = .fullScreen
+        mainVC.modalTransitionStyle = .crossDissolve
+        present(mainVC, animated: true)
+         
     }
     
     

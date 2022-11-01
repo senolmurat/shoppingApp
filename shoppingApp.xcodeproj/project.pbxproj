@@ -34,6 +34,25 @@
 		D9069348290FC4CB00BB779D /* UITableViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D906933C290FC4CB00BB779D /* UITableViewExtensions.swift */; };
 		D9069349290FC4CB00BB779D /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D906933E290FC4CB00BB779D /* StringExtensions.swift */; };
 		D906934C290FC5C400BB779D /* Toast in Frameworks */ = {isa = PBXBuildFile; productRef = D906934B290FC5C400BB779D /* Toast */; };
+		D93B6870291111A000A22842 /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93B686F291111A000A22842 /* OnboardingViewModel.swift */; };
+		D95DBCB02911103F0019EE17 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95DBCAE2911103F0019EE17 /* OnboardingViewController.swift */; };
+		D9BF7A97291115E40090E715 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9BF7A95291115E40090E715 /* OnboardingView.swift */; };
+		D9BF7A98291115E40090E715 /* OnboardingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9BF7A96291115E40090E715 /* OnboardingView.xib */; };
+		D9BF7A9A291116010090E715 /* OnboardingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9BF7A99291116010090E715 /* OnboardingViewController.xib */; };
+		D9BF7AA0291118A40090E715 /* CSTextView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9BF7A9D291118A40090E715 /* CSTextView.xib */; };
+		D9BF7AA1291118A40090E715 /* CSTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9BF7A9E291118A40090E715 /* CSTextView.swift */; };
+		D9BF7AA2291118A40090E715 /* CSView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9BF7A9F291118A40090E715 /* CSView.swift */; };
+		D9BF7AA829111EE60090E715 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9BF7AA729111EE60090E715 /* MainViewModel.swift */; };
+		D9BF7AAF291120600090E715 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9BF7AAD291120600090E715 /* MainViewController.swift */; };
+		D9BF7AB2291120990090E715 /* ProductsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9BF7AB1291120990090E715 /* ProductsViewModel.swift */; };
+		D9BF7AB5291120A80090E715 /* ProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9BF7AB3291120A80090E715 /* ProductsViewController.swift */; };
+		D9BF7AB6291120A80090E715 /* ProductsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9BF7AB4291120A80090E715 /* ProductsViewController.xib */; };
+		D9BF7AB8291120B50090E715 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9BF7AB7291120B50090E715 /* SearchViewModel.swift */; };
+		D9BF7ABB291120C20090E715 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9BF7AB9291120C20090E715 /* SearchViewController.swift */; };
+		D9BF7ABC291120C20090E715 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9BF7ABA291120C20090E715 /* SearchViewController.xib */; };
+		D9BF7ABE291120CD0090E715 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9BF7ABD291120CD0090E715 /* ProfileViewModel.swift */; };
+		D9BF7AC1291120D80090E715 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9BF7ABF291120D80090E715 /* ProfileViewController.swift */; };
+		D9BF7AC2291120D80090E715 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9BF7AC0291120D80090E715 /* ProfileViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +80,25 @@
 		D906933A290FC4CB00BB779D /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
 		D906933C290FC4CB00BB779D /* UITableViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewExtensions.swift; sourceTree = "<group>"; };
 		D906933E290FC4CB00BB779D /* StringExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
+		D93B686F291111A000A22842 /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
+		D95DBCAE2911103F0019EE17 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		D9BF7A95291115E40090E715 /* OnboardingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		D9BF7A96291115E40090E715 /* OnboardingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OnboardingView.xib; sourceTree = "<group>"; };
+		D9BF7A99291116010090E715 /* OnboardingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OnboardingViewController.xib; sourceTree = "<group>"; };
+		D9BF7A9D291118A40090E715 /* CSTextView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CSTextView.xib; sourceTree = "<group>"; };
+		D9BF7A9E291118A40090E715 /* CSTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSTextView.swift; sourceTree = "<group>"; };
+		D9BF7A9F291118A40090E715 /* CSView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSView.swift; sourceTree = "<group>"; };
+		D9BF7AA729111EE60090E715 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		D9BF7AAD291120600090E715 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		D9BF7AB1291120990090E715 /* ProductsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsViewModel.swift; sourceTree = "<group>"; };
+		D9BF7AB3291120A80090E715 /* ProductsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsViewController.swift; sourceTree = "<group>"; };
+		D9BF7AB4291120A80090E715 /* ProductsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductsViewController.xib; sourceTree = "<group>"; };
+		D9BF7AB7291120B50090E715 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		D9BF7AB9291120C20090E715 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		D9BF7ABA291120C20090E715 /* SearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
+		D9BF7ABD291120CD0090E715 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		D9BF7ABF291120D80090E715 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		D9BF7AC0291120D80090E715 /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +160,8 @@
 		D906930C290FB54B00BB779D /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				D9BF7AA329111EAF0090E715 /* Main */,
+				D9EC3A3D29110D3200049C9C /* Onboarding */,
 				D9069318290FB78500BB779D /* Auth */,
 			);
 			path = Scenes;
@@ -173,6 +213,7 @@
 		D9069323290FC4C400BB779D /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				D9BF7A9B291118A40090E715 /* CSKit */,
 				D9069324290FC4C400BB779D /* AlertManager.swift */,
 				D9069325290FC4C400BB779D /* FirebaseManager.swift */,
 			);
@@ -285,6 +326,110 @@
 			path = String;
 			sourceTree = "<group>";
 		};
+		D9BF7A94291115E40090E715 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				D9BF7A95291115E40090E715 /* OnboardingView.swift */,
+				D9BF7A96291115E40090E715 /* OnboardingView.xib */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		D9BF7A9B291118A40090E715 /* CSKit */ = {
+			isa = PBXGroup;
+			children = (
+				D9BF7A9C291118A40090E715 /* CSTextView */,
+				D9BF7A9F291118A40090E715 /* CSView.swift */,
+			);
+			path = CSKit;
+			sourceTree = "<group>";
+		};
+		D9BF7A9C291118A40090E715 /* CSTextView */ = {
+			isa = PBXGroup;
+			children = (
+				D9BF7A9D291118A40090E715 /* CSTextView.xib */,
+				D9BF7A9E291118A40090E715 /* CSTextView.swift */,
+			);
+			path = CSTextView;
+			sourceTree = "<group>";
+		};
+		D9BF7AA329111EAF0090E715 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				D9BF7AA629111EC80090E715 /* Search */,
+				D9BF7AA529111EC40090E715 /* Products */,
+				D9BF7AA429111EBA0090E715 /* Profile */,
+				D9BF7AA729111EE60090E715 /* MainViewModel.swift */,
+				D9BF7AAD291120600090E715 /* MainViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		D9BF7AA429111EBA0090E715 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				D9BF7ABD291120CD0090E715 /* ProfileViewModel.swift */,
+				D9BF7ABF291120D80090E715 /* ProfileViewController.swift */,
+				D9BF7AC0291120D80090E715 /* ProfileViewController.xib */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		D9BF7AA529111EC40090E715 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D9BF7AB1291120990090E715 /* ProductsViewModel.swift */,
+				D9BF7AB3291120A80090E715 /* ProductsViewController.swift */,
+				D9BF7AB4291120A80090E715 /* ProductsViewController.xib */,
+			);
+			path = Products;
+			sourceTree = "<group>";
+		};
+		D9BF7AA629111EC80090E715 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				D9BF7AB7291120B50090E715 /* SearchViewModel.swift */,
+				D9BF7AB9291120C20090E715 /* SearchViewController.swift */,
+				D9BF7ABA291120C20090E715 /* SearchViewController.xib */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		D9EC3A3D29110D3200049C9C /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				D9EC3A4029110D4B00049C9C /* View */,
+				D9EC3A3F29110D4600049C9C /* Controller */,
+				D9EC3A3E29110D3900049C9C /* ViewModel */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		D9EC3A3E29110D3900049C9C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				D93B686F291111A000A22842 /* OnboardingViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		D9EC3A3F29110D4600049C9C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D95DBCAE2911103F0019EE17 /* OnboardingViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D9EC3A4029110D4B00049C9C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D9BF7A99291116010090E715 /* OnboardingViewController.xib */,
+				D9BF7A94291115E40090E715 /* Onboarding */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -356,8 +501,14 @@
 			files = (
 				D9069304290FB39300BB779D /* LaunchScreen.storyboard in Resources */,
 				D906930E290FB5E200BB779D /* GoogleService-Info.plist in Resources */,
+				D9BF7AB6291120A80090E715 /* ProductsViewController.xib in Resources */,
 				D9069321290FB78500BB779D /* AuthViewController.xib in Resources */,
+				D9BF7A9A291116010090E715 /* OnboardingViewController.xib in Resources */,
+				D9BF7AC2291120D80090E715 /* ProfileViewController.xib in Resources */,
+				D9BF7A98291115E40090E715 /* OnboardingView.xib in Resources */,
+				D9BF7AA0291118A40090E715 /* CSTextView.xib in Resources */,
 				D9069301290FB39300BB779D /* Assets.xcassets in Resources */,
+				D9BF7ABC291120C20090E715 /* SearchViewController.xib in Resources */,
 				D90692FF290FB39100BB779D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -371,20 +522,33 @@
 			files = (
 				D9069347290FC4CB00BB779D /* UIViewControllerExtensions.swift in Sources */,
 				D9069340290FC4CB00BB779D /* UIImageExtensions.swift in Sources */,
+				D9BF7ABE291120CD0090E715 /* ProfileViewModel.swift in Sources */,
 				D906931F290FB78500BB779D /* AuthViewModel.swift in Sources */,
 				D9069345290FC4CB00BB779D /* UICollectionViewCellExtensions.swift in Sources */,
 				D9069342290FC4CB00BB779D /* UITableViewCellExtensions.swift in Sources */,
 				D90692FC290FB39100BB779D /* LaunchViewController.swift in Sources */,
 				D9069348290FC4CB00BB779D /* UITableViewExtensions.swift in Sources */,
+				D95DBCB02911103F0019EE17 /* OnboardingViewController.swift in Sources */,
 				D9069327290FC4C400BB779D /* FirebaseManager.swift in Sources */,
+				D9BF7AA1291118A40090E715 /* CSTextView.swift in Sources */,
 				D9069326290FC4C400BB779D /* AlertManager.swift in Sources */,
+				D9BF7AC1291120D80090E715 /* ProfileViewController.swift in Sources */,
 				D9069320290FB78500BB779D /* AuthViewController.swift in Sources */,
 				D9069343290FC4CB00BB779D /* UIColor+Extensions.swift in Sources */,
+				D9BF7AB2291120990090E715 /* ProductsViewModel.swift in Sources */,
+				D93B6870291111A000A22842 /* OnboardingViewModel.swift in Sources */,
+				D9BF7A97291115E40090E715 /* OnboardingView.swift in Sources */,
+				D9BF7AB5291120A80090E715 /* ProductsViewController.swift in Sources */,
+				D9BF7AAF291120600090E715 /* MainViewController.swift in Sources */,
 				D9069344290FC4CB00BB779D /* UICollectionViewExtensions.swift in Sources */,
 				D9069349290FC4CB00BB779D /* StringExtensions.swift in Sources */,
 				D906933F290FC4CB00BB779D /* SpinerViewController.swift in Sources */,
+				D9BF7AA2291118A40090E715 /* CSView.swift in Sources */,
+				D9BF7ABB291120C20090E715 /* SearchViewController.swift in Sources */,
 				D90692F8290FB39100BB779D /* AppDelegate.swift in Sources */,
 				D9069341290FC4CB00BB779D /* UIApplication.swift in Sources */,
+				D9BF7AB8291120B50090E715 /* SearchViewModel.swift in Sources */,
+				D9BF7AA829111EE60090E715 /* MainViewModel.swift in Sources */,
 				D9069346290FC4CB00BB779D /* UIImageViewExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
