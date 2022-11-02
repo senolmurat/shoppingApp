@@ -11,6 +11,11 @@
 		D98B82762912B239002B63CB /* API.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D98B826B2912B238002B63CB /* API.framework */; };
 		D98B827B2912B239002B63CB /* APITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98B827A2912B239002B63CB /* APITests.swift */; };
 		D98B827C2912B239002B63CB /* API.h in Headers */ = {isa = PBXBuildFile; fileRef = D98B826E2912B238002B63CB /* API.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D98B82872912B321002B63CB /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98B82862912B321002B63CB /* Product.swift */; };
+		D98B82882912B321002B63CB /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98B82862912B321002B63CB /* Product.swift */; };
+		D98B828A2912B341002B63CB /* FakeStoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98B82892912B341002B63CB /* FakeStoreService.swift */; };
+		D98B828B2912B341002B63CB /* FakeStoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98B82892912B341002B63CB /* FakeStoreService.swift */; };
+		D98B828E2912B50E002B63CB /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = D98B828D2912B50E002B63CB /* Moya */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +34,8 @@
 		D98B826F2912B238002B63CB /* API.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = API.docc; sourceTree = "<group>"; };
 		D98B82752912B239002B63CB /* APITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = APITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D98B827A2912B239002B63CB /* APITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APITests.swift; sourceTree = "<group>"; };
+		D98B82862912B321002B63CB /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Product.swift; path = "../../../../../GitHub/week5-project1-ceksat/CeksatAPI/CeksatAPI/Entity/Product.swift"; sourceTree = "<group>"; };
+		D98B82892912B341002B63CB /* FakeStoreService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FakeStoreService.swift; path = "../../../GitHub/week5-project1-ceksat/CeksatAPI/CeksatAPI/FakeStoreService.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D98B828E2912B50E002B63CB /* Moya in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,6 +62,7 @@
 			isa = PBXGroup;
 			children = (
 				D98B826D2912B238002B63CB /* API */,
+				D98B82892912B341002B63CB /* FakeStoreService.swift */,
 				D98B82792912B239002B63CB /* APITests */,
 				D98B826C2912B238002B63CB /* Products */,
 			);
@@ -71,6 +80,7 @@
 		D98B826D2912B238002B63CB /* API */ = {
 			isa = PBXGroup;
 			children = (
+				D98B82852912B30C002B63CB /* Models */,
 				D98B826E2912B238002B63CB /* API.h */,
 				D98B826F2912B238002B63CB /* API.docc */,
 			);
@@ -83,6 +93,14 @@
 				D98B827A2912B239002B63CB /* APITests.swift */,
 			);
 			path = APITests;
+			sourceTree = "<group>";
+		};
+		D98B82852912B30C002B63CB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D98B82862912B321002B63CB /* Product.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -113,6 +131,9 @@
 			dependencies = (
 			);
 			name = API;
+			packageProductDependencies = (
+				D98B828D2912B50E002B63CB /* Moya */,
+			);
 			productName = API;
 			productReference = D98B826B2912B238002B63CB /* API.framework */;
 			productType = "com.apple.product-type.framework";
@@ -162,6 +183,9 @@
 				Base,
 			);
 			mainGroup = D98B82612912B238002B63CB;
+			packageReferences = (
+				D98B828C2912B50D002B63CB /* XCRemoteSwiftPackageReference "Moya" */,
+			);
 			productRefGroup = D98B826C2912B238002B63CB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -195,6 +219,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D98B82702912B238002B63CB /* API.docc in Sources */,
+				D98B82872912B321002B63CB /* Product.swift in Sources */,
+				D98B828A2912B341002B63CB /* FakeStoreService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -203,6 +229,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D98B827B2912B239002B63CB /* APITests.swift in Sources */,
+				D98B82882912B321002B63CB /* Product.swift in Sources */,
+				D98B828B2912B341002B63CB /* FakeStoreService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -396,6 +424,7 @@
 		D98B82832912B239002B63CB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = NR35WN7L9Z;
@@ -412,6 +441,7 @@
 		D98B82842912B239002B63CB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = NR35WN7L9Z;
@@ -456,6 +486,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D98B828C2912B50D002B63CB /* XCRemoteSwiftPackageReference "Moya" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Moya/Moya.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 15.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D98B828D2912B50E002B63CB /* Moya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D98B828C2912B50D002B63CB /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = Moya;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D98B82622912B238002B63CB /* Project object */;
 }

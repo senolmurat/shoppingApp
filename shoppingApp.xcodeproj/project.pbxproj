@@ -36,6 +36,7 @@
 		D906934C290FC5C400BB779D /* Toast in Frameworks */ = {isa = PBXBuildFile; productRef = D906934B290FC5C400BB779D /* Toast */; };
 		D93B6870291111A000A22842 /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93B686F291111A000A22842 /* OnboardingViewModel.swift */; };
 		D95DBCB02911103F0019EE17 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95DBCAE2911103F0019EE17 /* OnboardingViewController.swift */; };
+		D98B82912912B5CF002B63CB /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = D98B82902912B5CF002B63CB /* Kingfisher */; };
 		D9BF7A97291115E40090E715 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9BF7A95291115E40090E715 /* OnboardingView.swift */; };
 		D9BF7A98291115E40090E715 /* OnboardingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9BF7A96291115E40090E715 /* OnboardingView.xib */; };
 		D9BF7A9A291116010090E715 /* OnboardingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9BF7A99291116010090E715 /* OnboardingViewController.xib */; };
@@ -106,6 +107,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D98B82912912B5CF002B63CB /* Kingfisher in Frameworks */,
 				D9069313290FB68300BB779D /* FirebaseDatabase in Frameworks */,
 				D9069311290FB68300BB779D /* FirebaseAuth in Frameworks */,
 				D9069315290FB68300BB779D /* FirebaseFirestore in Frameworks */,
@@ -452,6 +454,7 @@
 				D9069314290FB68300BB779D /* FirebaseFirestore */,
 				D9069316290FB68300BB779D /* FirebaseRemoteConfig */,
 				D906934B290FC5C400BB779D /* Toast */,
+				D98B82902912B5CF002B63CB /* Kingfisher */,
 			);
 			productName = shoppingApp;
 			productReference = D90692F4290FB39100BB779D /* shoppingApp.app */;
@@ -484,6 +487,7 @@
 			packageReferences = (
 				D906930F290FB68300BB779D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				D906934A290FC5C400BB779D /* XCRemoteSwiftPackageReference "Toast-Swift" */,
+				D98B828F2912B5CF002B63CB /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = D90692F5290FB39100BB779D /* Products */;
 			projectDirPath = "";
@@ -787,6 +791,14 @@
 				kind = branch;
 			};
 		};
+		D98B828F2912B5CF002B63CB /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -814,6 +826,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = D906934A290FC5C400BB779D /* XCRemoteSwiftPackageReference "Toast-Swift" */;
 			productName = Toast;
+		};
+		D98B82902912B5CF002B63CB /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D98B828F2912B5CF002B63CB /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
