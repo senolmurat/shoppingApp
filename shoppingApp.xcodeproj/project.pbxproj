@@ -34,6 +34,8 @@
 		D9069348290FC4CB00BB779D /* UITableViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D906933C290FC4CB00BB779D /* UITableViewExtensions.swift */; };
 		D9069349290FC4CB00BB779D /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D906933E290FC4CB00BB779D /* StringExtensions.swift */; };
 		D906934C290FC5C400BB779D /* Toast in Frameworks */ = {isa = PBXBuildFile; productRef = D906934B290FC5C400BB779D /* Toast */; };
+		D90FE7832913FB84008FB9AC /* UIButtonExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90FE7822913FB84008FB9AC /* UIButtonExtensions.swift */; };
+		D90FE7862913FBA4008FB9AC /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90FE7852913FBA4008FB9AC /* UIViewExtensions.swift */; };
 		D93B6870291111A000A22842 /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93B686F291111A000A22842 /* OnboardingViewModel.swift */; };
 		D95DBCB02911103F0019EE17 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95DBCAE2911103F0019EE17 /* OnboardingViewController.swift */; };
 		D98B82912912B5CF002B63CB /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = D98B82902912B5CF002B63CB /* Kingfisher */; };
@@ -81,6 +83,8 @@
 		D906933A290FC4CB00BB779D /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
 		D906933C290FC4CB00BB779D /* UITableViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewExtensions.swift; sourceTree = "<group>"; };
 		D906933E290FC4CB00BB779D /* StringExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
+		D90FE7822913FB84008FB9AC /* UIButtonExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButtonExtensions.swift; sourceTree = "<group>"; };
+		D90FE7852913FBA4008FB9AC /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 		D93B686F291111A000A22842 /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
 		D95DBCAE2911103F0019EE17 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		D9BF7A95291115E40090E715 /* OnboardingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
@@ -225,6 +229,8 @@
 		D9069328290FC4CB00BB779D /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				D90FE7842913FB95008FB9AC /* UIView */,
+				D90FE7812913FB75008FB9AC /* UIButton */,
 				D9069329290FC4CB00BB779D /* SpinerViewController.swift */,
 				D906932A290FC4CB00BB779D /* UIImage */,
 				D906932C290FC4CB00BB779D /* UIApplication */,
@@ -326,6 +332,22 @@
 				D906933E290FC4CB00BB779D /* StringExtensions.swift */,
 			);
 			path = String;
+			sourceTree = "<group>";
+		};
+		D90FE7812913FB75008FB9AC /* UIButton */ = {
+			isa = PBXGroup;
+			children = (
+				D90FE7822913FB84008FB9AC /* UIButtonExtensions.swift */,
+			);
+			path = UIButton;
+			sourceTree = "<group>";
+		};
+		D90FE7842913FB95008FB9AC /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				D90FE7852913FBA4008FB9AC /* UIViewExtensions.swift */,
+			);
+			path = UIView;
 			sourceTree = "<group>";
 		};
 		D9BF7A94291115E40090E715 /* Onboarding */ = {
@@ -550,10 +572,12 @@
 				D9BF7AA2291118A40090E715 /* CSView.swift in Sources */,
 				D9BF7ABB291120C20090E715 /* SearchViewController.swift in Sources */,
 				D90692F8290FB39100BB779D /* AppDelegate.swift in Sources */,
+				D90FE7862913FBA4008FB9AC /* UIViewExtensions.swift in Sources */,
 				D9069341290FC4CB00BB779D /* UIApplication.swift in Sources */,
 				D9BF7AB8291120B50090E715 /* SearchViewModel.swift in Sources */,
 				D9BF7AA829111EE60090E715 /* MainViewModel.swift in Sources */,
 				D9069346290FC4CB00BB779D /* UIImageViewExtensions.swift in Sources */,
+				D90FE7832913FB84008FB9AC /* UIButtonExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
