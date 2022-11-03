@@ -12,7 +12,10 @@ class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        let navBarItem = UIBarButtonItem()
+        navBarItem.title = "22.0"
+        navBarItem.image = UIImage(named: "cart")
+        navigationItem.rightBarButtonItem = navBarItem
     }
 
 

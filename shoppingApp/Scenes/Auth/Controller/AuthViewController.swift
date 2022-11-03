@@ -74,6 +74,7 @@ final class AuthViewController: UIViewController {
               let password = passwordTextField.text else {
             return
         }
+        self.showLoadingIndicator()
         switch authType {
         case .signIn:
             viewModel.signIn(credential, password)
@@ -97,15 +98,17 @@ final class AuthViewController: UIViewController {
 extension AuthViewController: AuthDelegate {
     func didErrorOccurred(_ error: Error) {
         AlertManager.showInfoAlertBox(for: error as NSError, in: self, handler: nil)
+        self.dismissLoadingIndicator()
     }
     
     func didSignedUp() {
         self.view.makeToast("Signed up Successfully...", duration: 3.0, position: .bottom)
+        self.dismissLoadingIndicator()
         //AlertManager.showInfoAlertBox(with: "Signed up Successfully...", errorTitle: "Success", in: self, handler: nil)
     }
     
     func didSignedIn() {
-        
+        self.dismissLoadingIndicator()
         let mainVC = MainViewController()
         UIApplication.shared.delegate?.window??.rootViewController = mainVC
         mainVC.modalPresentationStyle = .fullScreen

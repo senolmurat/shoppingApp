@@ -36,6 +36,11 @@
 		D906934C290FC5C400BB779D /* Toast in Frameworks */ = {isa = PBXBuildFile; productRef = D906934B290FC5C400BB779D /* Toast */; };
 		D90FE7832913FB84008FB9AC /* UIButtonExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90FE7822913FB84008FB9AC /* UIButtonExtensions.swift */; };
 		D90FE7862913FBA4008FB9AC /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90FE7852913FBA4008FB9AC /* UIViewExtensions.swift */; };
+		D92AE1F62914029F00CDA738 /* API.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D92AE1F52914029F00CDA738 /* API.framework */; };
+		D92AE1F72914029F00CDA738 /* API.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D92AE1F52914029F00CDA738 /* API.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D92AE1FC2914051900CDA738 /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92AE1FA2914051900CDA738 /* ProductCell.swift */; };
+		D92AE1FD2914051900CDA738 /* ProductCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D92AE1FB2914051900CDA738 /* ProductCell.xib */; };
+		D92AE20029140ED100CDA738 /* DoubleExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92AE1FF29140ED100CDA738 /* DoubleExtensions.swift */; };
 		D93B6870291111A000A22842 /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93B686F291111A000A22842 /* OnboardingViewModel.swift */; };
 		D95DBCB02911103F0019EE17 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95DBCAE2911103F0019EE17 /* OnboardingViewController.swift */; };
 		D98B82912912B5CF002B63CB /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = D98B82902912B5CF002B63CB /* Kingfisher */; };
@@ -57,6 +62,20 @@
 		D9BF7AC1291120D80090E715 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9BF7ABF291120D80090E715 /* ProfileViewController.swift */; };
 		D9BF7AC2291120D80090E715 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9BF7AC0291120D80090E715 /* ProfileViewController.xib */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D92AE1F82914029F00CDA738 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				D92AE1F72914029F00CDA738 /* API.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		D90692F4290FB39100BB779D /* shoppingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = shoppingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -85,6 +104,10 @@
 		D906933E290FC4CB00BB779D /* StringExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 		D90FE7822913FB84008FB9AC /* UIButtonExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButtonExtensions.swift; sourceTree = "<group>"; };
 		D90FE7852913FBA4008FB9AC /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
+		D92AE1F52914029F00CDA738 /* API.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = API.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D92AE1FA2914051900CDA738 /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
+		D92AE1FB2914051900CDA738 /* ProductCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductCell.xib; sourceTree = "<group>"; };
+		D92AE1FF29140ED100CDA738 /* DoubleExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoubleExtensions.swift; sourceTree = "<group>"; };
 		D93B686F291111A000A22842 /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
 		D95DBCAE2911103F0019EE17 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		D9BF7A95291115E40090E715 /* OnboardingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
@@ -111,6 +134,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D92AE1F62914029F00CDA738 /* API.framework in Frameworks */,
 				D98B82912912B5CF002B63CB /* Kingfisher in Frameworks */,
 				D9069313290FB68300BB779D /* FirebaseDatabase in Frameworks */,
 				D9069311290FB68300BB779D /* FirebaseAuth in Frameworks */,
@@ -128,6 +152,7 @@
 			children = (
 				D90692F6290FB39100BB779D /* shoppingApp */,
 				D90692F5290FB39100BB779D /* Products */,
+				D92AE1F42914029F00CDA738 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -229,6 +254,7 @@
 		D9069328290FC4CB00BB779D /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				D92AE1FE29140EC900CDA738 /* Double */,
 				D90FE7842913FB95008FB9AC /* UIView */,
 				D90FE7812913FB75008FB9AC /* UIButton */,
 				D9069329290FC4CB00BB779D /* SpinerViewController.swift */,
@@ -350,6 +376,31 @@
 			path = UIView;
 			sourceTree = "<group>";
 		};
+		D92AE1F42914029F00CDA738 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D92AE1F52914029F00CDA738 /* API.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D92AE1F92914050600CDA738 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				D92AE1FA2914051900CDA738 /* ProductCell.swift */,
+				D92AE1FB2914051900CDA738 /* ProductCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		D92AE1FE29140EC900CDA738 /* Double */ = {
+			isa = PBXGroup;
+			children = (
+				D92AE1FF29140ED100CDA738 /* DoubleExtensions.swift */,
+			);
+			path = Double;
+			sourceTree = "<group>";
+		};
 		D9BF7A94291115E40090E715 /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
@@ -402,6 +453,7 @@
 		D9BF7AA529111EC40090E715 /* Products */ = {
 			isa = PBXGroup;
 			children = (
+				D92AE1F92914050600CDA738 /* Cells */,
 				D9BF7AB1291120990090E715 /* ProductsViewModel.swift */,
 				D9BF7AB3291120A80090E715 /* ProductsViewController.swift */,
 				D9BF7AB4291120A80090E715 /* ProductsViewController.xib */,
@@ -464,6 +516,7 @@
 				D90692F0290FB39100BB779D /* Sources */,
 				D90692F1290FB39100BB779D /* Frameworks */,
 				D90692F2290FB39100BB779D /* Resources */,
+				D92AE1F82914029F00CDA738 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -534,6 +587,7 @@
 				D9BF7A98291115E40090E715 /* OnboardingView.xib in Resources */,
 				D9BF7AA0291118A40090E715 /* CSTextView.xib in Resources */,
 				D9069301290FB39300BB779D /* Assets.xcassets in Resources */,
+				D92AE1FD2914051900CDA738 /* ProductCell.xib in Resources */,
 				D9BF7ABC291120C20090E715 /* SearchViewController.xib in Resources */,
 				D90692FF290FB39100BB779D /* Main.storyboard in Resources */,
 			);
@@ -558,6 +612,7 @@
 				D9069327290FC4C400BB779D /* FirebaseManager.swift in Sources */,
 				D9BF7AA1291118A40090E715 /* CSTextView.swift in Sources */,
 				D9069326290FC4C400BB779D /* AlertManager.swift in Sources */,
+				D92AE1FC2914051900CDA738 /* ProductCell.swift in Sources */,
 				D9BF7AC1291120D80090E715 /* ProfileViewController.swift in Sources */,
 				D9069320290FB78500BB779D /* AuthViewController.swift in Sources */,
 				D9069343290FC4CB00BB779D /* UIColor+Extensions.swift in Sources */,
@@ -567,6 +622,7 @@
 				D9BF7AB5291120A80090E715 /* ProductsViewController.swift in Sources */,
 				D9BF7AAF291120600090E715 /* MainViewController.swift in Sources */,
 				D9069344290FC4CB00BB779D /* UICollectionViewExtensions.swift in Sources */,
+				D92AE20029140ED100CDA738 /* DoubleExtensions.swift in Sources */,
 				D9069349290FC4CB00BB779D /* StringExtensions.swift in Sources */,
 				D906933F290FC4CB00BB779D /* SpinerViewController.swift in Sources */,
 				D9BF7AA2291118A40090E715 /* CSView.swift in Sources */,
