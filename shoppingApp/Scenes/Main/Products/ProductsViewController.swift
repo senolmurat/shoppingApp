@@ -57,11 +57,10 @@ extension ProductsViewController: UICollectionViewDelegate {
 // MARK: - UICollectionViewDelegateFlowLayout
 extension ProductsViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        var columns: CGFloat
-        columns = 3
         
+        var columns: CGFloat = 3
         let spacing: CGFloat = 4
-        let totalHorizontalSpacing = (columns - 1) * spacing
+        let totalHorizontalSpacing = (columns + 1) * spacing
         
         let itemWidth = (collectionView.bounds.width - totalHorizontalSpacing) / columns
         let itemSize = CGSize(width: itemWidth, height: itemWidth * 1.8)
