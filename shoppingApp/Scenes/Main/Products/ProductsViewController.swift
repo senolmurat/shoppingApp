@@ -36,7 +36,7 @@ extension ProductsViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let detailVC = ProductsDetailViewController()
         detailVC.viewModel.product = productList[indexPath.row]
-        self.hidesBottomBarWhenPushed = true
+        detailVC.hidesBottomBarWhenPushed = true
         navigationController?.pushViewController(detailVC, animated: true)
     }
     

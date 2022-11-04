@@ -21,10 +21,10 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="sQT-My-rEU">
-                    <rect key="frame" x="4" y="0.0" width="375" height="667"/>
+                    <rect key="frame" x="8" y="0.0" width="359" height="667"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="4" minimumInteritemSpacing="4" id="Bdj-6H-PEg">
-                        <size key="itemSize" width="128" height="128"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="8" minimumInteritemSpacing="4" id="Bdj-6H-PEg">
+                        <size key="itemSize" width="0.0" height="0.0"/>
                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
                         <size key="footerReferenceSize" width="0.0" height="0.0"/>
                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -39,11 +39,11 @@
             <color key="backgroundColor" name="dustyWhite"/>
             <constraints>
                 <constraint firstItem="sQT-My-rEU" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="1dY-Tg-SCC"/>
-                <constraint firstItem="sQT-My-rEU" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="4" id="6ld-uV-y2d"/>
+                <constraint firstItem="sQT-My-rEU" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="8" id="6ld-uV-y2d"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="sQT-My-rEU" secondAttribute="trailing" constant="8" id="7ms-07-uCd"/>
                 <constraint firstItem="sQT-My-rEU" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="DUx-L5-jlm"/>
-                <constraint firstItem="sQT-My-rEU" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" constant="4" id="zXQ-4E-FAY"/>
             </constraints>
-            <point key="canvasLocation" x="80" y="-11.374407582938389"/>
+            <point key="canvasLocation" x="79.200000000000003" y="-12.143928035982009"/>
         </view>
     </objects>
     <resources>

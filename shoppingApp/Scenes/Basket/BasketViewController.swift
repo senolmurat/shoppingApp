@@ -49,10 +49,13 @@ extension BasketViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        /*
         let product = viewModel.items[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: BasketItemCell.getDescribingIdentifier(), for: indexPath) as! BasketItemCell
         cell.configure(item: product)
         return cell
+         */
+        return UITableViewCell()
     }
     
 }

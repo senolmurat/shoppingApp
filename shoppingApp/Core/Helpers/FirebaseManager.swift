@@ -11,8 +11,7 @@ import FirebaseFirestore
 import FirebaseAuth
 
 protocol FirebaseManagerDelegate: AnyObject {
-    func didUpdateFavourites()
-    func didUpdateBookmarks()
+    //func didUpdateFavourites()
 }
 
 struct FirebaseManager {
@@ -21,19 +20,14 @@ struct FirebaseManager {
     static let currentAuthUser = Auth.auth().currentUser
     static let db = Firestore.firestore()
     
+    /*
     static func addFavourites(photoID: String) {
         db.collection("users").document(currentAuthUser!.uid).updateData([
             "favourites": FieldValue.arrayUnion([photoID])
         ])
         delegate?.didUpdateFavourites()
     }
-    
-    static func addBookmarks(photoID: String) {
-        db.collection("users").document(currentAuthUser!.uid).updateData([
-            "bookmarks": FieldValue.arrayUnion([photoID])
-        ])
-        delegate?.didUpdateBookmarks()
-    }
+     */
     
     static func changeUsername(username: String) {
         db.collection("users").document(currentAuthUser!.uid).updateData([

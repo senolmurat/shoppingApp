@@ -21,6 +21,8 @@ class ProductsDetailViewController: UIViewController {
     var viewModel = ProductsDetailViewModel()
     private var product: ProductItem?
     
+    // MARK: Lifecycle
+
     override func viewDidLoad() {
         super.viewDidLoad()
 

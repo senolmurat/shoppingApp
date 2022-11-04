@@ -8,6 +8,8 @@
 import Foundation
 import FirebaseAuth
 import FirebaseRemoteConfig
+import FirebaseFirestoreSwift
+import API
 
 protocol AuthDelegate: AnyObject {
     func didErrorOccurred(_ error: Error)
@@ -27,20 +29,15 @@ final class AuthViewModel {
                 self.delegate?.didErrorOccurred(error)
                 return
             }
-            print(authResult)
             if let uID = authResult?.user.uid {
-                FirebaseManager.db.collection("users").document(uID).setData([
-                    "id": uID,
-                    "username": username,
-                    "email": credential,
-                    "favourites": [],
-                    "bookmarks" : []
-                ]) { err in
-                    if let err = err {
-                        self.delegate?.didErrorOccurred(err)
-                    } else {
-                        self.delegate?.didSignedUp()
-                    }
+                do {
+                    try FirebaseManager.db.collection("users").document(uID).setData(from: UserEntity(
+                        id: uID,
+                        username: username,
+                        email: credential))
+                    self.delegate?.didSignedUp()
+                } catch let error {
+                    self.delegate?.didErrorOccurred(error)
                 }
             }
         }
@@ -54,7 +51,6 @@ final class AuthViewModel {
                 self?.delegate?.didErrorOccurred(error)
                 return
             }
-            print(authResult)
             
             self?.delegate?.didSignedIn()
             // TODO: show alert info

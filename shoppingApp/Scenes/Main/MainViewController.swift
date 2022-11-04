@@ -21,7 +21,7 @@ class MainViewController: UITabBarController {
         searchVC.title = "Search"
         searchVC.view.backgroundColor = .dustyWhite
         
-        let profileVC = SearchViewController()
+        let profileVC = ProfileViewController()
         profileVC.title = "Profile"
         profileVC.view.backgroundColor = .dustyWhite
     

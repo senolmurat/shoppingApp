@@ -22,7 +22,7 @@ class BasketItemCell: UITableViewCell {
         // Initialization code
     }
 
-    func configure(item: Product) {
+    func configure(item: ProductItem) {
         
     }
     
