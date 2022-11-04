@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import Kingfisher
 
 extension UIImageView{
     
@@ -29,6 +30,7 @@ extension UIImageView{
     }
      */
     
+    /*
     func animateImage() {
         UIView.animate(withDuration: 0.1, animations: {
             //let newImage = isFavourited ? UIImage(named: "bookmark.fill"): UIImage(named: "bookmark")
@@ -40,8 +42,9 @@ extension UIImageView{
             })
         })
     }
+     */
     
-    /*
+    
     func setImage(withPath imagePath: String?, cornerRadius: CGFloat? = nil, placeholder : UIImage? = nil) {
         
         guard let imagePath = imagePath else {
@@ -99,5 +102,28 @@ extension UIImageView{
         }
         
     }
-     */
 }
+
+@IBDesignable extension UIImageView {
+
+    @IBInspectable var borderWidth: CGFloat {
+        set {
+            layer.borderWidth = newValue
+        }
+        get {
+            return layer.borderWidth
+        }
+    }
+
+    @IBInspectable var borderColor: UIColor? {
+        set {
+            guard let uiColor = newValue else { return }
+            layer.borderColor = uiColor.cgColor
+        }
+        get {
+            guard let color = layer.borderColor else { return nil }
+            return UIColor(cgColor: color)
+        }
+    }
+}
+
