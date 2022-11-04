@@ -16,6 +16,7 @@
 		D98B828A2912B341002B63CB /* FakeStoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98B82892912B341002B63CB /* FakeStoreService.swift */; };
 		D98B828B2912B341002B63CB /* FakeStoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98B82892912B341002B63CB /* FakeStoreService.swift */; };
 		D98B828E2912B50E002B63CB /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = D98B828D2912B50E002B63CB /* Moya */; };
+		D9C3BB3529152CFB00CF1AC7 /* UserEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C3BB3429152CFB00CF1AC7 /* UserEntity.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		D98B827A2912B239002B63CB /* APITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APITests.swift; sourceTree = "<group>"; };
 		D98B82862912B321002B63CB /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Product.swift; path = "../../../../../GitHub/week5-project1-ceksat/CeksatAPI/CeksatAPI/Entity/Product.swift"; sourceTree = "<group>"; };
 		D98B82892912B341002B63CB /* FakeStoreService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FakeStoreService.swift; path = "../../../GitHub/week5-project1-ceksat/CeksatAPI/CeksatAPI/FakeStoreService.swift"; sourceTree = "<group>"; };
+		D9C3BB3429152CFB00CF1AC7 /* UserEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserEntity.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				D98B82862912B321002B63CB /* Product.swift */,
+				D9C3BB3429152CFB00CF1AC7 /* UserEntity.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -218,6 +221,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9C3BB3529152CFB00CF1AC7 /* UserEntity.swift in Sources */,
 				D98B82702912B238002B63CB /* API.docc in Sources */,
 				D98B82872912B321002B63CB /* Product.swift in Sources */,
 				D98B828A2912B341002B63CB /* FakeStoreService.swift in Sources */,

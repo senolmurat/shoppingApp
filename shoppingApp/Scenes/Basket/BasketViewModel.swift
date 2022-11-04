@@ -18,7 +18,6 @@ final class BasketViewModel {
     
     weak var delegate: BasketDelegate?
     
-    var items: [Product]?
     
     func fetchBasket() {
         
