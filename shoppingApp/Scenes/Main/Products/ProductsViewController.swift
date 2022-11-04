@@ -34,17 +34,10 @@ class ProductsViewController: UIViewController {
 // MARK: - UICollectionViewDelegate
 extension ProductsViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        // TODO: DetailPage for produtc
-        /*
-        let detailVC = SearchDetailViewController()
-        detailVC.photo = photoList[indexPath.row]
-        detailVC.providesPresentationContextTransitionStyle = true
-        detailVC.definesPresentationContext = true
-        //detailVC.modalPresentationStyle = .currentContext
-        detailVC.view.backgroundColor = UIColor.shadow
-        //navigationController?.pushViewController(detailVC, animated: true)
-        self.present(detailVC, animated: true)
-         */
+        let detailVC = ProductsDetailViewController()
+        detailVC.viewModel.product = productList[indexPath.row]
+        self.hidesBottomBarWhenPushed = true
+        navigationController?.pushViewController(detailVC, animated: true)
     }
     
     func collectionView(_ collectionView: UICollectionView, didEndDisplaying cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
@@ -58,7 +51,7 @@ extension ProductsViewController: UICollectionViewDelegate {
 extension ProductsViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        var columns: CGFloat = 3
+        let columns: CGFloat = 3
         let spacing: CGFloat = 4
         let totalHorizontalSpacing = (columns + 1) * spacing
         
@@ -99,6 +92,7 @@ extension ProductsViewController: UICollectionViewDataSource {
 
 extension ProductsViewController: ProductsDelegate {
     func didErrorOccurred(_ error: Error) {
+        // TODO: pop back to previous page
         AlertManager.showInfoAlertBox(for: error as NSError, in: self, handler: nil)
     }
     
