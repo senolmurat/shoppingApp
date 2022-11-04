@@ -12,11 +12,21 @@ protocol ProductItem {
     var productId: Int? {get}
     var productName: String? {get}
     var productPrice: Double? {get}
+    var productCategory: String? {get}
     var productDescription: String? {get}
     var productImage: String? {get}
+    var productRating: Rating? {get}
 }
 
 extension Product: ProductItem {
+    var productCategory: String? {
+        category
+    }
+    
+    var productRating: Rating? {
+        rating
+    }
+    
     var productId: Int? {
         id
     }
