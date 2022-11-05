@@ -9,13 +9,14 @@ import Foundation
 import API
 
 protocol ProductItem {
-    var productId: Int? {get}
+    var productId: Int {get}
     var productName: String? {get}
     var productPrice: Double? {get}
     var productCategory: String? {get}
     var productDescription: String? {get}
     var productImage: String? {get}
     var productRating: Rating? {get}
+    var amountInBasket: Int? {get}
 }
 
 extension Product: ProductItem {
@@ -27,7 +28,7 @@ extension Product: ProductItem {
         rating
     }
     
-    var productId: Int? {
+    var productId: Int {
         id
     }
     
@@ -45,6 +46,10 @@ extension Product: ProductItem {
     
     var productImage: String? {
         image
+    }
+    
+    var amountInBasket: Int? {
+        amount
     }
 }
 

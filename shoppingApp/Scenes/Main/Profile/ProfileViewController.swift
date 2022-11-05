@@ -31,9 +31,8 @@ class ProfileViewController: UIViewController {
         let navBarItem = UIBarButtonItem()
         navBarItem.title = "22.0"
         navBarItem.image = UIImage(named: "cart")
+        navBarItem.action = #selector(self.cartClicked)
         navigationItem.rightBarButtonItem = navBarItem
-        
-        
         
         let tap = UITapGestureRecognizer(target: self, action: #selector(logoutStackViewClicked))
         logoutStackView.addGestureRecognizer(tap)
@@ -52,6 +51,12 @@ class ProfileViewController: UIViewController {
         AlertManager.showConfirmation(with: "Are you sure you want to log out ?", in: self) { action in
             self.viewModel.fetchLogout()
         }
+    }
+    
+    @objc private func cartClicked() {
+        let basketVC = BasketViewController()
+        basketVC.hidesBottomBarWhenPushed = true
+        navigationController?.pushViewController(basketVC, animated: true)
     }
 
 }

@@ -24,10 +24,17 @@ class ProductsViewController: UIViewController {
         let navBarItem = UIBarButtonItem()
         navBarItem.title = "22.0"
         navBarItem.image = UIImage(named: "cart")
+        navBarItem.action = #selector(self.cartClicked)
         navigationItem.rightBarButtonItem = navBarItem
         
         viewModel.delegate = self
         viewModel.fetchProducts(.init())
+    }
+    
+    @objc private func cartClicked() {
+        let basketVC = BasketViewController()
+        basketVC.hidesBottomBarWhenPushed = true
+        navigationController?.pushViewController(basketVC, animated: true)
     }
 }
 

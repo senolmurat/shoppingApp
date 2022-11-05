@@ -16,32 +16,68 @@ class BasketViewController: UIViewController {
     }
     @IBOutlet weak var labelTotalAmount: UILabel!
     
+    private var basketItems: [ProductItem] = []
     var viewModel = BasketViewModel()
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        title = "Basket"
         viewModel.delegate = self
-        // Do any additional setup after loading the view.
+        viewModel.fetchBasket()
     }
 }
 
 // MARK: BasketDelegate
 extension BasketViewController: BasketDelegate {
+
+    
+    func didErrorOccurred(_ message: String) {
+        AlertManager.showInfoAlertBox(with: message, errorTitle: "Error", in: self, handler: nil)
+    }
     func didErrorOccurred(_ error: Error) {
         AlertManager.showInfoAlertBox(for: error as NSError, in: self, handler: nil)
     }
     
+    func didFetchBasket(response: BasketViewModel.FetchBasket.Response) {
+        guard let basket = response.basket else {
+            // TODO: basket is empty
+            return
+        }
+        self.basketItems = basket
+        tableView.reloadData()
+    }
+    
+    func didFetchUpdateProductAmount(response: BasketViewModel.FetchProductAmount.Response) {
+        print("success")
+    }
+}
+
+// MARK: BasketItemCellDelegate
+extension BasketViewController: BasketItemCellDelegate {
+    func didStepperValueChanged(value: Int, item: ProductItem) {
+        viewModel.fetchUpdateProductAmount(reqeust: .init(productId: item.productId, amount: value))
+    }
 }
 
 // MARK: UITableViewDelegate
 extension BasketViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let detailVC = ProductsDetailViewController()
+        detailVC.viewModel.product = basketItems[indexPath.row]
+        detailVC.hidesBottomBarWhenPushed = true
+        navigationController?.pushViewController(detailVC, animated: true)
+    }
     
+    func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        let productCell = cell as? BasketItemCell
+        productCell?.ivProduct.kf.cancelDownloadTask()
+    }
 }
 
 // MARK: UITableViewDataSource
 extension BasketViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        1
+        basketItems.count
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -49,13 +85,14 @@ extension BasketViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        /*
-        let product = viewModel.items[indexPath.row]
+        
+        let product = basketItems[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: BasketItemCell.getDescribingIdentifier(), for: indexPath) as! BasketItemCell
         cell.configure(item: product)
+        cell.delegate = self
         return cell
-         */
-        return UITableViewCell()
     }
     
 }
+
+

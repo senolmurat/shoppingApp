@@ -7,6 +7,11 @@
 
 import UIKit
 
+protocol BasketItemCellDelegate: AnyObject {
+    func didStepperValueChanged(value: Int, item: ProductItem)
+    func didErrorOccurred(_ error: Error)
+}
+
 class BasketItemCell: UITableViewCell {
 
     @IBOutlet weak var labelName: UILabel!
@@ -17,13 +22,29 @@ class BasketItemCell: UITableViewCell {
     @IBOutlet weak var ivProduct: UIImageView!
     @IBOutlet weak var stepper: UIStepper!
     
+    var delegate: BasketItemCellDelegate?
+    private var product: ProductItem?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
 
     func configure(item: ProductItem) {
+        self.product = item
+        labelName.text = item.productName
+        labelPrice.text = item.productPrice?.currency
+        labelCategory.text = item.productCategory
+        stepper.value = Double(item.amountInBasket ?? 0)
+        labelQuantity.text = item.amountInBasket != nil ? String(item.amountInBasket!) : "-"
         
+        ivProduct.setImage(withPath: item.productImage)
     }
     
+    @IBAction func stepperValueChanged(_ sender: Any) {
+        guard let product = product else {return}
+        let stepper = sender as! UIStepper
+        labelQuantity.text = String(stepper.value)
+        self.delegate?.didStepperValueChanged(value: stepper.value, item: product)
+    }
 }

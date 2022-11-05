@@ -15,18 +15,13 @@ class SearchViewController: UIViewController {
         let navBarItem = UIBarButtonItem()
         navBarItem.title = "22.0"
         navBarItem.image = UIImage(named: "cart")
+        navBarItem.action = #selector(self.cartClicked)
         navigationItem.rightBarButtonItem = navBarItem
     }
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    @objc private func cartClicked() {
+        let basketVC = BasketViewController()
+        basketVC.hidesBottomBarWhenPushed = true
+        navigationController?.pushViewController(basketVC, animated: true)
     }
-    */
-
 }
