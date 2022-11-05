@@ -61,8 +61,8 @@
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="qPa-Ba-iTc">
                     <rect key="frame" x="0.0" y="600" width="375" height="67"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l4p-Ea-PtP">
-                            <rect key="frame" x="32" y="16" width="311" height="35"/>
+                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l4p-Ea-PtP">
+                            <rect key="frame" x="32" y="0.0" width="311" height="0.0"/>
                             <color key="tintColor" name="themeColor2"/>
                             <state key="normal" title="Button"/>
                             <buttonConfiguration key="configuration" style="filled">
@@ -79,14 +79,17 @@
                                 <action selector="addToCartPressed:" destination="-1" eventType="touchUpInside" id="hCf-7j-ppZ"/>
                             </connections>
                         </button>
-                        <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="6Wy-Tt-CIn">
-                            <rect key="frame" x="32" y="0.0" width="311" height="0.0"/>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="6Wy-Tt-CIn">
+                            <rect key="frame" x="32" y="16" width="311" height="35"/>
                             <subviews>
                                 <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="lWQ-WN-zWF">
-                                    <rect key="frame" x="0.0" y="0.0" width="151.5" height="0.0"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="151.5" height="35"/>
+                                    <connections>
+                                        <action selector="stepperValueChanged:" destination="-1" eventType="valueChanged" id="0gC-9T-MXN"/>
+                                    </connections>
                                 </stepper>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3ya-UD-0zc">
-                                    <rect key="frame" x="159.5" y="0.0" width="151.5" height="0.0"/>
+                                    <rect key="frame" x="159.5" y="0.0" width="151.5" height="35"/>
                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                     <color key="textColor" red="0.33333333329999998" green="0.18039215689999999" blue="0.85098039219999999" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>

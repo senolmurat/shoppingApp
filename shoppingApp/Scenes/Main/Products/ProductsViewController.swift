@@ -21,11 +21,8 @@ class ProductsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let navBarItem = UIBarButtonItem()
-        navBarItem.title = "22.0"
-        navBarItem.image = UIImage(named: "cart")
-        navBarItem.action = #selector(self.cartClicked)
-        navigationItem.rightBarButtonItem = navBarItem
+        let navBarItem = UIBarButtonItem(image: UIImage(named: "cart"), style: .plain, target: self, action: #selector(self.cartClicked))
+        self.navigationItem.rightBarButtonItem = navBarItem
         
         viewModel.delegate = self
         viewModel.fetchProducts(.init())

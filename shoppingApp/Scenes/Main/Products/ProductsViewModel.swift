@@ -8,7 +8,7 @@
 import Foundation
 import API
 
-protocol ProductItem {
+protocol ProductItem: Codable {
     var productId: Int {get}
     var productName: String? {get}
     var productPrice: Double? {get}

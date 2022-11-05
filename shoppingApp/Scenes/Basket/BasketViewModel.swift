@@ -51,14 +51,22 @@ final class BasketViewModel {
             self.delegate?.didErrorOccurred("Something went wrong. Current Logged in User does not exists")
             return
         }
+        
+        var items: [ProductItem] = []
+        
         let basketRef = FirebaseManager.db.collection("basket").document(userId)
-
-        basketRef.getDocument(as: [Product].self) { result in
-            switch result {
-                case .success(let basket):
-                self.basketResponse = .init(basket: basket)
-                case .failure(let error):
-                    self.delegate?.didErrorOccurred(error)
+        basketRef.collection("basket").getDocuments { (querySnapshot, err) in
+            if let err = err {
+                self.delegate?.didErrorOccurred(err)
+            } else {
+                for document in querySnapshot!.documents {
+                    do {
+                        try items.append(document.data(as: Product.self))
+                    } catch _ {
+                        continue
+                    }
+                }
+                self.delegate?.didFetchBasket(response: .init(basket: items))
             }
         }
     }
@@ -69,7 +77,7 @@ final class BasketViewModel {
             return
         }
         let basketRef = FirebaseManager.db.collection("basket").document(userId)
-        let productRef = basketRef.collection(String(reqeust.productId)).document("item")
+        let productRef = basketRef.collection("basket").document(String(reqeust.productId))
         productRef.updateData([
             "amount": reqeust.amount
         ]) { error in

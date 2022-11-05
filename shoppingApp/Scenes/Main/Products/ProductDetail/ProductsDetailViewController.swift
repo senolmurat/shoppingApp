@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Toast
 
 class ProductsDetailViewController: UIViewController {
 
@@ -40,18 +41,40 @@ class ProductsDetailViewController: UIViewController {
         labelPrice.text = product.productPrice?.currency
         labelTitle.text = product.productName
         labelDescription.text = product.productDescription
+        labelStepperCounter.text = Int(stepper.value).description
         
-        // TODO: check if product exsist in basket
+        viewModel.fetchToCheckProductInBasket(request: .init(productId: product.productId))
         addToCartButton.isHidden = false
         stepperStackView.isHidden = true
+    }
+    
+    private func IsProductInBasket(result: Bool) {
+        addToCartButton.isHidden = result
+        stepperStackView.isHidden = !result
     }
 
     @IBAction func addToCartPressed(_ sender: UIButton) {
         // TODO: add product to basket and show stepper
+        guard let product = product else {
+            // TODO: pop
+            return
+        }
+        viewModel.fetchAddToBasket(.init(product: product))
     }
+    
+    @IBAction func stepperValueChanged(_ sender: UIStepper) {
+        guard let product = product else {return}
+        labelStepperCounter.text = Int(sender.value).description
+        viewModel.fetchUpdateProductAmount(request: .init(productId: product.productId, amount: Int(sender.value)))
+    }
+    
 }
 
 extension ProductsDetailViewController: ProductDetailDelegate {
+    func didCheckProductInBasket(response: ProductsDetailViewModel.FetchToCheckProductInBasket.Response) {
+        self.IsProductInBasket(result: response.isProductInBasket)
+    }
+   
     func didErrorOccurred(_ error: Error) {
         AlertManager.showInfoAlertBox(for: error as NSError, in: self, handler: nil)
     }
@@ -62,6 +85,19 @@ extension ProductsDetailViewController: ProductDetailDelegate {
     
     func didGetProduct(response: ProductsDetailViewModel.FetchProduct.Response) {
         self.product = response.product
+        stepper.value = Double(response.product.amountInBasket ?? 0)
         setupUI()
     }
+    
+    func didAddToBasket() {
+        self.view.makeToast("Product Added to basket", duration: 3.0, position: .top)
+        self.IsProductInBasket(result: true)
+        // TODO: show activity indiciator in stack view
+        
+    }
+    
+    func didFetchUpdateProductAmount() {
+        // do nothing
+    }
+    
 }

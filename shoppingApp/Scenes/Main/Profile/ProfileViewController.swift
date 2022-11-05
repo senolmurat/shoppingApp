@@ -28,11 +28,8 @@ class ProfileViewController: UIViewController {
     private func setup() {
         title = "Product Detail"
         
-        let navBarItem = UIBarButtonItem()
-        navBarItem.title = "22.0"
-        navBarItem.image = UIImage(named: "cart")
-        navBarItem.action = #selector(self.cartClicked)
-        navigationItem.rightBarButtonItem = navBarItem
+        let navBarItem = UIBarButtonItem(image: UIImage(named: "cart"), style: .plain, target: self, action: #selector(self.cartClicked))
+        self.navigationItem.rightBarButtonItem = navBarItem
         
         let tap = UITapGestureRecognizer(target: self, action: #selector(logoutStackViewClicked))
         logoutStackView.addGestureRecognizer(tap)

@@ -34,9 +34,9 @@ class BasketItemCell: UITableViewCell {
         self.product = item
         labelName.text = item.productName
         labelPrice.text = item.productPrice?.currency
-        labelCategory.text = item.productCategory
+        labelCategory.text = item.productCategory?.capitalized
         stepper.value = Double(item.amountInBasket ?? 0)
-        labelQuantity.text = item.amountInBasket != nil ? String(item.amountInBasket!) : "-"
+        labelQuantity.text = Int(stepper.value).description
         
         ivProduct.setImage(withPath: item.productImage)
     }
@@ -45,6 +45,7 @@ class BasketItemCell: UITableViewCell {
         guard let product = product else {return}
         let stepper = sender as! UIStepper
         labelQuantity.text = String(stepper.value)
-        self.delegate?.didStepperValueChanged(value: stepper.value, item: product)
+        
+        self.delegate?.didStepperValueChanged(value: Int(stepper.value), item: product)
     }
 }

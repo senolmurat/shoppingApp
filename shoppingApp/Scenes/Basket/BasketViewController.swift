@@ -25,6 +25,14 @@ class BasketViewController: UIViewController {
         viewModel.delegate = self
         viewModel.fetchBasket()
     }
+    
+    private func setupUI() {
+        var total: Double = 0
+        for product in basketItems {
+            total += (product.productPrice ?? 0) * Double(product.amountInBasket ?? 0)
+        }
+        labelTotalAmount.text = total.currency
+    }
 }
 
 // MARK: BasketDelegate
