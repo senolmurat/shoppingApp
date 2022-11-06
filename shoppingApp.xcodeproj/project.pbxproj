@@ -42,6 +42,7 @@
 		D92AE1FD2914051900CDA738 /* ProductCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D92AE1FB2914051900CDA738 /* ProductCell.xib */; };
 		D92AE20029140ED100CDA738 /* DoubleExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92AE1FF29140ED100CDA738 /* DoubleExtensions.swift */; };
 		D93B6870291111A000A22842 /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93B686F291111A000A22842 /* OnboardingViewModel.swift */; };
+		D9401CB02917CAF500861D4C /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = D9401CAF2917CAF500861D4C /* IQKeyboardManagerSwift */; };
 		D95DBCB02911103F0019EE17 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95DBCAE2911103F0019EE17 /* OnboardingViewController.swift */; };
 		D98B82912912B5CF002B63CB /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = D98B82902912B5CF002B63CB /* Kingfisher */; };
 		D99979D12915515400B8F532 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = D99979D02915515400B8F532 /* FirebaseFirestoreSwift */; };
@@ -156,6 +157,7 @@
 				D9069313290FB68300BB779D /* FirebaseDatabase in Frameworks */,
 				D9069311290FB68300BB779D /* FirebaseAuth in Frameworks */,
 				D9069315290FB68300BB779D /* FirebaseFirestore in Frameworks */,
+				D9401CB02917CAF500861D4C /* IQKeyboardManagerSwift in Frameworks */,
 				D906934C290FC5C400BB779D /* Toast in Frameworks */,
 				D9069317290FB68300BB779D /* FirebaseRemoteConfig in Frameworks */,
 				D99979D12915515400B8F532 /* FirebaseFirestoreSwift in Frameworks */,
@@ -581,6 +583,7 @@
 				D906934B290FC5C400BB779D /* Toast */,
 				D98B82902912B5CF002B63CB /* Kingfisher */,
 				D99979D02915515400B8F532 /* FirebaseFirestoreSwift */,
+				D9401CAF2917CAF500861D4C /* IQKeyboardManagerSwift */,
 			);
 			productName = shoppingApp;
 			productReference = D90692F4290FB39100BB779D /* shoppingApp.app */;
@@ -614,6 +617,7 @@
 				D906930F290FB68300BB779D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				D906934A290FC5C400BB779D /* XCRemoteSwiftPackageReference "Toast-Swift" */,
 				D98B828F2912B5CF002B63CB /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				D9401CAE2917CAF500861D4C /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
 			);
 			productRefGroup = D90692F5290FB39100BB779D /* Products */;
 			projectDirPath = "";
@@ -930,6 +934,14 @@
 				kind = branch;
 			};
 		};
+		D9401CAE2917CAF500861D4C /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.5.0;
+			};
+		};
 		D98B828F2912B5CF002B63CB /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
@@ -965,6 +977,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = D906934A290FC5C400BB779D /* XCRemoteSwiftPackageReference "Toast-Swift" */;
 			productName = Toast;
+		};
+		D9401CAF2917CAF500861D4C /* IQKeyboardManagerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D9401CAE2917CAF500861D4C /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			productName = IQKeyboardManagerSwift;
 		};
 		D98B82902912B5CF002B63CB /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;

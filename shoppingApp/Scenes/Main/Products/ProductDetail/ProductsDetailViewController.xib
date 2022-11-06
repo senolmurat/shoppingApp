@@ -6,6 +6,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -15,6 +16,7 @@
                 <outlet property="ivProduct" destination="kWJ-YJ-dLo" id="Gv3-ko-gFQ"/>
                 <outlet property="labelDescription" destination="LxA-2F-fNJ" id="I5K-T3-DVC"/>
                 <outlet property="labelPrice" destination="9gs-rf-lkZ" id="SZK-2H-co7"/>
+                <outlet property="labelRating" destination="f8l-jS-boC" id="pi0-rh-kfD"/>
                 <outlet property="labelStepperCounter" destination="3ya-UD-0zc" id="PEL-km-5Zr"/>
                 <outlet property="labelTitle" destination="wrB-SV-RH8" id="ITq-q8-lvb"/>
                 <outlet property="stepper" destination="lWQ-WN-zWF" id="DU9-T5-wcd"/>
@@ -104,18 +106,42 @@
                     </constraints>
                     <edgeInsets key="layoutMargins" top="16" left="32" bottom="16" right="32"/>
                 </stackView>
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ujb-tU-EoS">
+                    <rect key="frame" x="0.0" y="334" width="375" height="25"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star.fill" translatesAutoresizingMaskIntoConstraints="NO" id="20j-QC-xJf">
+                            <rect key="frame" x="32" y="0.0" width="25" height="25"/>
+                            <color key="tintColor" systemColor="systemYellowColor"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="25" id="0xQ-Zr-PJi"/>
+                                <constraint firstAttribute="height" constant="25" id="Hcu-aM-0hd"/>
+                                <constraint firstAttribute="width" secondItem="20j-QC-xJf" secondAttribute="height" multiplier="1:1" id="Hrl-Wr-pkP"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f8l-jS-boC">
+                            <rect key="frame" x="65" y="0.0" width="278" height="25"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <edgeInsets key="layoutMargins" top="0.0" left="32" bottom="0.0" right="32"/>
+                </stackView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" name="dustyWhite"/>
             <constraints>
                 <constraint firstItem="kWJ-YJ-dLo" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="1oo-ZQ-ahc"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ujb-tU-EoS" secondAttribute="trailing" id="Gdu-tm-hjQ"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="qPa-Ba-iTc" secondAttribute="trailing" id="O0t-14-Gc8"/>
                 <constraint firstItem="kWJ-YJ-dLo" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="QrC-b7-2iA"/>
                 <constraint firstItem="wuw-4w-jdO" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="YAr-2J-Q6X"/>
                 <constraint firstItem="wuw-4w-jdO" firstAttribute="top" secondItem="kWJ-YJ-dLo" secondAttribute="bottom" constant="16" id="bgg-et-Yu3"/>
+                <constraint firstItem="ujb-tU-EoS" firstAttribute="bottom" secondItem="kWJ-YJ-dLo" secondAttribute="bottom" constant="-16" id="f1p-df-0Ih"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="qPa-Ba-iTc" secondAttribute="bottom" id="fly-FW-3Cm"/>
                 <constraint firstItem="qPa-Ba-iTc" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="hQU-gr-fzf"/>
                 <constraint firstItem="kWJ-YJ-dLo" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="jx5-LD-G13"/>
+                <constraint firstItem="ujb-tU-EoS" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="tsb-uk-WiW"/>
                 <constraint firstItem="qPa-Ba-iTc" firstAttribute="top" relation="greaterThanOrEqual" secondItem="wuw-4w-jdO" secondAttribute="bottom" constant="16" id="vW1-DS-JRc"/>
                 <constraint firstItem="wuw-4w-jdO" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="yUL-On-ZhY"/>
             </constraints>
@@ -123,11 +149,15 @@
         </view>
     </objects>
     <resources>
+        <image name="star.fill" width="25" height="25"/>
         <namedColor name="dustyWhite">
             <color red="0.9649999737739563" green="0.96899998188018799" blue="0.98000001907348633" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="themeColor2">
             <color red="0.36500000953674316" green="0.24300000071525574" blue="0.7369999885559082" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>

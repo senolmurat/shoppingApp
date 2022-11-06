@@ -14,6 +14,7 @@ class ProductsDetailViewController: UIViewController {
     @IBOutlet weak var labelPrice: UILabel!
     @IBOutlet weak var labelTitle: UILabel!
     @IBOutlet weak var labelDescription: UILabel!
+    @IBOutlet weak var labelRating: UILabel!
     @IBOutlet weak var addToCartButton: UIButton!
     @IBOutlet weak var stepperStackView: UIStackView!
     @IBOutlet weak var stepper: UIStepper!
@@ -43,6 +44,12 @@ class ProductsDetailViewController: UIViewController {
         labelPrice.text = product.productPrice?.currency
         labelTitle.text = product.productName
         labelDescription.text = product.productDescription
+        if let rating = product.productRating?.rate {
+            labelRating.text = "\(rating)/5"
+        } else {
+            labelRating.text = "-/5"
+        }
+        labelRating.text = "\(product.productRating?.rate ?? 0)/5"
         labelStepperCounter.text = Int(stepper.value).description
         
         viewModel.fetchToCheckProductInBasket(request: .init(productId: product.productId))
