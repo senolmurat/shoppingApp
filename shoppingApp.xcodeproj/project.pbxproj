@@ -220,35 +220,11 @@
 		D9069318290FB78500BB779D /* Auth */ = {
 			isa = PBXGroup;
 			children = (
-				D9069319290FB78500BB779D /* ViewModel */,
-				D906931B290FB78500BB779D /* Controller */,
-				D906931D290FB78500BB779D /* View */,
-			);
-			path = Auth;
-			sourceTree = "<group>";
-		};
-		D9069319290FB78500BB779D /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
 				D906931A290FB78500BB779D /* AuthViewModel.swift */,
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		D906931B290FB78500BB779D /* Controller */ = {
-			isa = PBXGroup;
-			children = (
 				D906931C290FB78500BB779D /* AuthViewController.swift */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		D906931D290FB78500BB779D /* View */ = {
-			isa = PBXGroup;
-			children = (
 				D906931E290FB78500BB779D /* AuthViewController.xib */,
 			);
-			path = View;
+			path = Auth;
 			sourceTree = "<group>";
 		};
 		D9069322290FC4B800BB779D /* Core */ = {
@@ -524,27 +500,11 @@
 		D9EC3A3D29110D3200049C9C /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
-				D9EC3A4029110D4B00049C9C /* View */,
-				D9EC3A3F29110D4600049C9C /* Controller */,
+				D9BF7A94291115E40090E715 /* Onboarding */,
+				D95DBCAE2911103F0019EE17 /* OnboardingViewController.swift */,
+				D9BF7A99291116010090E715 /* OnboardingViewController.xib */,
 			);
 			path = Onboarding;
-			sourceTree = "<group>";
-		};
-		D9EC3A3F29110D4600049C9C /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				D95DBCAE2911103F0019EE17 /* OnboardingViewController.swift */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		D9EC3A4029110D4B00049C9C /* View */ = {
-			isa = PBXGroup;
-			children = (
-				D9BF7A99291116010090E715 /* OnboardingViewController.xib */,
-				D9BF7A94291115E40090E715 /* Onboarding */,
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

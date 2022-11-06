@@ -56,34 +56,5 @@ final class AuthViewModel {
             // TODO: show alert info
         }
     }
-    
-    func fetchRemoteConfig(completion: @escaping (Bool) -> Void) {
-            let remoteConfig = RemoteConfig.remoteConfig()
-            let settings = RemoteConfigSettings()
-            settings.minimumFetchInterval = 0
-            remoteConfig.configSettings = settings
-            remoteConfig.setDefaults(fromPlist: "RemoteConfigDefaults")
-            
-            remoteConfig.fetch { (status, error) -> Void in
-                if status == .success {
-                    remoteConfig.activate { _, error in
-                        
-                        if let error = error {
-                            self.delegate?.didErrorOccurred(error)
-                            return
-                        }
-                        
-                        let isSignUpDisabled = remoteConfig.configValue(forKey: "isSignUpDisabled").boolValue
-                        DispatchQueue.main.async {
-                            completion(isSignUpDisabled)
-                        }
-                    }
-                } else {
-                    guard let error = error else {
-                        return
-                    }
-                    self.delegate?.didErrorOccurred(error)
-                }
-            }
-        }
+
 }

@@ -21,13 +21,6 @@ class ProductsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        /*
-        let navBarItem = UIBarButtonItem(image: UIImage(named: "cart"), style: .plain, target: self, action: #selector(self.cartClicked))
-        navBarItem.tintColor = .themeColor2
-        self.navigationItem.rightBarButtonItem = navBarItem
-        self.navigationController?.navigationBar.tintColor = .themeColor2
-         */
         
         NotificationCenter.default.addObserver(self, selector: #selector(self.basketCostChanged(notification:)), name: Notification.Name("basketCostChanged"), object: nil)
         

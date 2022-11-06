@@ -58,13 +58,6 @@ final class AuthViewController: UIViewController {
         
         viewModel.delegate = self
         
-        /*
-        self.showLoadingIndicator()
-        viewModel.fetchRemoteConfig { isSignUpDisabled in
-            self.segmentedControl.isHidden = isSignUpDisabled
-            self.dismissLoadingIndicator()
-        }
-         */
     }
     
     @IBAction private func didTapLoginButton(_ sender: UIButton) {

@@ -32,14 +32,14 @@ class LaunchViewController: UIViewController {
         spinner.startAnimating()
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
             self.spinner.stopAnimating()
-            var authVC = OnboardingViewController()
+            var authVC = UIViewController()
+            authVC = AuthViewController()
             let defaults = UserDefaults.standard
-            /*
+            
             if defaults.object(forKey: "IsFirstTime") == nil {
                 defaults.set(false, forKey: "IsFirstTime")
                 authVC = OnboardingViewController()
             }
-             */
             
             authVC.modalTransitionStyle = .crossDissolve
             authVC.modalPresentationStyle = .fullScreen
