@@ -13,9 +13,10 @@ protocol ProductDetailDelegate: AnyObject {
     func didErrorOccurred(_ error: Error)
     func didErrorOccurred(_ message: String)
     func didGetProduct(response: ProductsDetailViewModel.FetchProduct.Response)
-    func didAddToBasket()
+    func didAddToBasket(response: ProductsDetailViewModel.FetchAddToBasket.Response)
     func didFetchUpdateProductAmount()
     func didCheckProductInBasket(response: ProductsDetailViewModel.FetchToCheckProductInBasket.Response)
+    func didDeleteProduct(response: BasketViewModel.FetchDeleteProduct.Response)
 }
 
 final class ProductsDetailViewModel {
@@ -30,7 +31,9 @@ final class ProductsDetailViewModel {
         struct Request {
             var product: ProductItem
         }
-        struct Response {}
+        struct Response {
+            var product: ProductItem
+        }
     }
     
     public enum FetchProductAmount {
@@ -47,6 +50,15 @@ final class ProductsDetailViewModel {
         }
         struct Response {
             var isProductInBasket: Bool
+        }
+    }
+    
+    public enum FetchDeleteProduct {
+        struct Request {
+            var productId: Int
+        }
+        struct Response {
+            var productId: Int
         }
     }
     
@@ -85,7 +97,7 @@ final class ProductsDetailViewModel {
                 category: product.productCategory,
                 image: product.productImage,
                 rating: product.productRating))
-            self.delegate?.didAddToBasket()
+            self.delegate?.didAddToBasket(response: .init(product: product))
         } catch let error {
             self.delegate?.didErrorOccurred(error)
         }
@@ -123,5 +135,21 @@ final class ProductsDetailViewModel {
             }
         }
         
+    }
+    
+    func fetchDeleteProduct(reqeust: BasketViewModel.FetchDeleteProduct.Request) {
+        guard let userId = FirebaseManager.currentAuthUser?.uid else {
+            self.delegate?.didErrorOccurred("Something went wrong. Current Logged in User does not exists")
+            return
+        }
+        let basketRef = FirebaseManager.db.collection("basket").document(userId)
+        let productRef = basketRef.collection("basket").document(String(reqeust.productId))
+        productRef.delete { error in
+            if let error = error {
+                self.delegate?.didErrorOccurred(error)
+            } else {
+                self.delegate?.didDeleteProduct(response: .init(productId: reqeust.productId))
+            }
+        }
     }
 }

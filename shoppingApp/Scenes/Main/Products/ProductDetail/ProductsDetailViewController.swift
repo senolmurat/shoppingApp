@@ -24,6 +24,15 @@ class ProductsDetailViewController: UIViewController {
     private var product: ProductItem?
     
     // MARK: Lifecycle
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        guard let product = product else {return}
+        if(product.amountInBasket == 0) {
+            viewModel.fetchDeleteProduct(reqeust: .init(productId: product.productId))
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -68,6 +77,7 @@ class ProductsDetailViewController: UIViewController {
             return
         }
         labelStepperCounter.text = item.amountInBasket.description
+        stepper.value = Double(item.amountInBasket)
         self.product?.amountInBasket = item.amountInBasket
     }
 
@@ -90,6 +100,10 @@ class ProductsDetailViewController: UIViewController {
 }
 
 extension ProductsDetailViewController: ProductDetailDelegate {
+    func didDeleteProduct(response: BasketViewModel.FetchDeleteProduct.Response) {
+        // do nothing
+    }
+    
     func didCheckProductInBasket(response: ProductsDetailViewModel.FetchToCheckProductInBasket.Response) {
         self.IsProductInBasket(result: response.isProductInBasket)
     }
@@ -108,11 +122,10 @@ extension ProductsDetailViewController: ProductDetailDelegate {
         setupUI()
     }
     
-    func didAddToBasket() {
+    func didAddToBasket(response: ProductsDetailViewModel.FetchAddToBasket.Response) {
         self.view.makeToast("Product Added to basket", duration: 3.0, position: .top)
         self.IsProductInBasket(result: true)
-        // TODO: show activity indiciator in stack view
-        
+        NotificationCenter.default.post(name: Notification.Name("productAmountChangedInProductDetail"), object: response.product)
     }
     
     func didFetchUpdateProductAmount() {

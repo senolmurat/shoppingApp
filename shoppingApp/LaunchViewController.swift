@@ -11,7 +11,7 @@ class LaunchViewController: UIViewController {
 
     private let appImageView: UIImageView = {
         let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
-        imageView.image = UIImage(named: "appIcon")
+        imageView.image = UIImage(named: "appIcon.circle")
         return imageView
     }()
     
