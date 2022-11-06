@@ -23,6 +23,25 @@ extension UICollectionView {
     }
 
     func restore() {
-        self.backgroundView = nil
+        DispatchQueue.main.async {
+            self.backgroundView = nil
+        }
+    }
+    
+    func showCollectionViewLoadingIndicator() {
+        var spinner: UIActivityIndicatorView?
+        DispatchQueue.main.async {
+            if #available(iOS 13.0, *) {
+                spinner = UIActivityIndicatorView(style: .medium)
+            } else {
+                spinner = UIActivityIndicatorView(style: .white)
+            }
+            guard let spinner = spinner else { return }
+            spinner.color = .themeColor2
+            spinner.startAnimating()
+            spinner.frame = CGRect(x: CGFloat(0), y: CGFloat(0), width: self.bounds.width, height: CGFloat(100))
+
+            self.backgroundView = spinner
+        }
     }
 }

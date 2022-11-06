@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "SearchViewController.viewDidLoad():SearchViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "viewModel">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "SearchViewController.searchBar(_:selectedScopeButtonIndexDidChange:):SearchViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "SearchViewModel.fetchCategory(_:):SearchViewModel.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "products">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "SearchViewController.didGetSearch(response:):SearchViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "productList">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

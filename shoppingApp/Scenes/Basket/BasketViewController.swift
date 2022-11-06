@@ -35,6 +35,7 @@ class BasketViewController: UIViewController {
         
         title = "Basket"
         viewModel.delegate = self
+        tableView.showTableViewLoadingIndicator()
         viewModel.fetchBasket()
         
         NotificationCenter.default.addObserver(self, selector: #selector(self.productAmountChangedNotification(notification:)), name: Notification.Name("productAmountChangedInProductDetail"), object: nil)
@@ -90,15 +91,18 @@ extension BasketViewController: BasketDelegate {
     }
     
     func didErrorOccurred(_ message: String) {
+        tableView.restore()
         self.dismissLoadingIndicator()
         AlertManager.showInfoAlertBox(with: message, errorTitle: "Error", in: self, handler: nil)
     }
     func didErrorOccurred(_ error: Error) {
+        tableView.restore()
         self.dismissLoadingIndicator()
         AlertManager.showInfoAlertBox(for: error as NSError, in: self, handler: nil)
     }
     
     func didFetchBasket(response: BasketViewModel.FetchBasket.Response) {
+        tableView.restore()
         guard let basket = response.basket else {
             // TODO: basket is empty
             return
