@@ -41,7 +41,6 @@
 		D92AE1FC2914051900CDA738 /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92AE1FA2914051900CDA738 /* ProductCell.swift */; };
 		D92AE1FD2914051900CDA738 /* ProductCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D92AE1FB2914051900CDA738 /* ProductCell.xib */; };
 		D92AE20029140ED100CDA738 /* DoubleExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92AE1FF29140ED100CDA738 /* DoubleExtensions.swift */; };
-		D93B6870291111A000A22842 /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93B686F291111A000A22842 /* OnboardingViewModel.swift */; };
 		D9401CB02917CAF500861D4C /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = D9401CAF2917CAF500861D4C /* IQKeyboardManagerSwift */; };
 		D95DBCB02911103F0019EE17 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95DBCAE2911103F0019EE17 /* OnboardingViewController.swift */; };
 		D98B82912912B5CF002B63CB /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = D98B82902912B5CF002B63CB /* Kingfisher */; };
@@ -118,7 +117,6 @@
 		D92AE1FA2914051900CDA738 /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
 		D92AE1FB2914051900CDA738 /* ProductCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductCell.xib; sourceTree = "<group>"; };
 		D92AE1FF29140ED100CDA738 /* DoubleExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoubleExtensions.swift; sourceTree = "<group>"; };
-		D93B686F291111A000A22842 /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
 		D95DBCAE2911103F0019EE17 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		D9B5B9A7291515430039E881 /* ProductsDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsDetailViewModel.swift; sourceTree = "<group>"; };
 		D9B5B9A9291515560039E881 /* ProductsDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsDetailViewController.swift; sourceTree = "<group>"; };
@@ -528,17 +526,8 @@
 			children = (
 				D9EC3A4029110D4B00049C9C /* View */,
 				D9EC3A3F29110D4600049C9C /* Controller */,
-				D9EC3A3E29110D3900049C9C /* ViewModel */,
 			);
 			path = Onboarding;
-			sourceTree = "<group>";
-		};
-		D9EC3A3E29110D3900049C9C /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				D93B686F291111A000A22842 /* OnboardingViewModel.swift */,
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		D9EC3A3F29110D4600049C9C /* Controller */ = {
@@ -678,7 +667,6 @@
 				D9069320290FB78500BB779D /* AuthViewController.swift in Sources */,
 				D9069343290FC4CB00BB779D /* UIColor+Extensions.swift in Sources */,
 				D9BF7AB2291120990090E715 /* ProductsViewModel.swift in Sources */,
-				D93B6870291111A000A22842 /* OnboardingViewModel.swift in Sources */,
 				D9BF7A97291115E40090E715 /* OnboardingView.swift in Sources */,
 				D9BF7AB5291120A80090E715 /* ProductsViewController.swift in Sources */,
 				D9BF7AAF291120600090E715 /* MainViewController.swift in Sources */,

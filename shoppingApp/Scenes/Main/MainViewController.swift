@@ -8,10 +8,14 @@
 import UIKit
 
 class MainViewController: UITabBarController {
+    
+    private var viewModel = MainViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         delegate = self
+        viewModel.delegate = self
+        viewModel.fetchBasket()
         
         let productsVC = ProductsViewController()
         productsVC.title = "Products"
@@ -40,6 +44,22 @@ class MainViewController: UITabBarController {
         items[1].image = UIImage(named: "search")
         items[2].image = UIImage(named: "person.fill")
     }
+}
+
+extension MainViewController: MainDelegate {
+    func didErrorOccurred(_ error: Error) {
+        AlertManager.showInfoAlertBox(for: error as NSError, in: self, handler: nil)
+    }
+    
+    func didErrorOccurred(_ message: String) {
+        AlertManager.showInfoAlertBox(with: message, errorTitle: "Error", in: self, handler: nil)
+    }
+    
+    func didFetchBasket(response: MainViewModel.FetchBasket.Response) {
+        NotificationCenter.default.post(name: Notification.Name("basketCostChanged"), object: response.basketTotal.currency)
+    }
+    
+    
 }
 
 extension MainViewController: UITabBarControllerDelegate {

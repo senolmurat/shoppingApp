@@ -3,6 +3,9 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "MainViewController.didFetchBasket(response:):MainViewController.swift">
+      </ContextState>
+      <ContextState
          contextName = "SearchViewController.viewDidLoad():SearchViewController.swift">
          <PersistentStrings>
             <PersistentString
@@ -18,6 +21,17 @@
          <PersistentStrings>
             <PersistentString
                value = "products">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "OnboardingViewController.onboardingViews.didset:OnboardingViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "onboardingViews">
+            </PersistentString>
+            <PersistentString
+               value = "contentView">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

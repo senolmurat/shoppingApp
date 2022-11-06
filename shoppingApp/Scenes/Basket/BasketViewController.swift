@@ -43,8 +43,12 @@ class BasketViewController: UIViewController {
     
     @objc func productAmountChangedNotification(notification: Notification) {
         guard let item = notification.object as? ProductItem else {return}
-        guard let itemIndex = basketItems.firstIndex(where: { $0.productId == item.productId } ) else {return}
-        basketItems[itemIndex].amountInBasket = item.amountInBasket
+        if let itemIndex = basketItems.firstIndex(where: { $0.productId == item.productId } ) {
+            basketItems[itemIndex].amountInBasket = item.amountInBasket
+        } else {
+            basketItems.append(item)
+        }
+        
         //tableView.reloadRows(at: [IndexPath(row: itemIndex, section: 1)], with: .automatic)
         tableView.reloadData()
         setupUI()
@@ -56,6 +60,7 @@ class BasketViewController: UIViewController {
             total += (product.productPrice ?? 0) * Double(product.amountInBasket)
         }
         labelTotalAmount.text = total.currency
+        NotificationCenter.default.post(name: Notification.Name("basketCostChanged"), object: total.currency)
     }
     
     private func deleteProductFromBasket(item: ProductItem?) {

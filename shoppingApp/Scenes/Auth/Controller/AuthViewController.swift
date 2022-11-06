@@ -57,7 +57,6 @@ final class AuthViewController: UIViewController {
         super.viewDidLoad()
         
         viewModel.delegate = self
-        credentionTextField.text = "test@gmail.com"
         
         /*
         self.showLoadingIndicator()

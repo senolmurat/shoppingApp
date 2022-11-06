@@ -15,6 +15,7 @@ class SearchViewController: UIViewController {
         }
     }
     
+    private var labelBasketAmount = UILabel()
     private var lastEnteredText: String = ""
     private var isInSearchMode: Bool = false
     private var viewModel = SearchViewModel()
@@ -34,13 +35,30 @@ class SearchViewController: UIViewController {
         setupNavBar()
         setupSearchBar()
         
+        NotificationCenter.default.addObserver(self, selector: #selector(self.basketCostChanged(notification:)), name: Notification.Name("basketCostChanged"), object: nil)
+        
         viewModel.delegate = self
     }
     
     private func setupNavBar() {
-        let navBarItem = UIBarButtonItem(image: UIImage(named: "cart"), style: .plain, target: self, action: #selector(self.cartClicked))
-        navBarItem.tintColor = .themeColor2
-        self.navigationItem.rightBarButtonItem = navBarItem
+        let cartImage = UIImageView(image: UIImage(named: "cart"))
+        cartImage.tintColor = .themeColor2
+        cartImage.isUserInteractionEnabled = false
+        
+        labelBasketAmount.text = ""
+        labelBasketAmount.textColor = .themeColor2
+        labelBasketAmount.numberOfLines = 1;
+        labelBasketAmount.textAlignment = .right;
+        labelBasketAmount.font = UIFont.systemFont(ofSize: 14.0, weight: UIFont.Weight.semibold)
+        labelBasketAmount.sizeToFit()
+        let stackView = UIStackView(arrangedSubviews: [cartImage, labelBasketAmount])
+        stackView.spacing = 4
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(cartClicked))
+        stackView.addGestureRecognizer(tap)
+        stackView.isUserInteractionEnabled = true
+        
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(customView: stackView)
         self.navigationController?.navigationBar.tintColor = .themeColor2
     }
     
@@ -53,14 +71,20 @@ class SearchViewController: UIViewController {
         searchController.hidesNavigationBarDuringPresentation = false
         searchController.searchBar.tintColor = .themeColor2
         searchController.searchBar.showsScopeBar = true
+        searchController.searchBar.sizeToFit()
         navigationItem.searchController = searchController
-        definesPresentationContext = true
+        self.definesPresentationContext = true
     }
     
     @objc private func cartClicked() {
         let basketVC = BasketViewController()
         basketVC.hidesBottomBarWhenPushed = true
         navigationController?.pushViewController(basketVC, animated: true)
+    }
+    
+    @objc func basketCostChanged(notification: Notification) {
+        guard let text = notification.object as? String else {return}
+        labelBasketAmount.text = text
     }
 }
 
