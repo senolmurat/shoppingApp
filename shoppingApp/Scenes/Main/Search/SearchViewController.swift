@@ -71,8 +71,9 @@ class SearchViewController: UIViewController {
         searchController.hidesNavigationBarDuringPresentation = false
         searchController.searchBar.tintColor = .themeColor2
         searchController.searchBar.showsScopeBar = true
+        searchController.searchBar.sizeToFit()
         navigationItem.searchController = searchController
-        definesPresentationContext = true
+        self.definesPresentationContext = true
     }
     
     @objc private func cartClicked() {
