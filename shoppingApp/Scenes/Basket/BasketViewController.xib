@@ -39,6 +39,9 @@
                             <buttonConfiguration key="configuration" style="filled" title="Confirm" cornerStyle="capsule">
                                 <color key="baseBackgroundColor" name="themeColor2"/>
                             </buttonConfiguration>
+                            <connections>
+                                <action selector="confirmPressed:" destination="-1" eventType="touchUpInside" id="Fue-cO-jgI"/>
+                            </connections>
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fft-GJ-xaq">
                             <rect key="frame" x="313.66666666666669" y="16.000000000000004" width="44.333333333333314" height="34.333333333333343"/>

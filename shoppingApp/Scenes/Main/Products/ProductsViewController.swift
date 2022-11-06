@@ -22,7 +22,9 @@ class ProductsViewController: UIViewController {
         super.viewDidLoad()
 
         let navBarItem = UIBarButtonItem(image: UIImage(named: "cart"), style: .plain, target: self, action: #selector(self.cartClicked))
+        navBarItem.tintColor = .themeColor2
         self.navigationItem.rightBarButtonItem = navBarItem
+        self.navigationController?.navigationBar.tintColor = .themeColor2
         
         viewModel.delegate = self
         viewModel.fetchProducts(.init())

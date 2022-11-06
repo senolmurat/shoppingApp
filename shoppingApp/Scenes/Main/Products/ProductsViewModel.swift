@@ -16,10 +16,11 @@ protocol ProductItem: Codable {
     var productDescription: String? {get}
     var productImage: String? {get}
     var productRating: Rating? {get}
-    var amountInBasket: Int? {get}
+    var amountInBasket: Int {get set}
 }
 
 extension Product: ProductItem {
+    
     var productCategory: String? {
         category
     }
@@ -48,8 +49,13 @@ extension Product: ProductItem {
         image
     }
     
-    var amountInBasket: Int? {
-        amount
+    var amountInBasket: Int {
+        get {
+            amount ?? 1
+        }
+        set {
+            amount = newValue
+        }
     }
 }
 

@@ -26,7 +26,9 @@ class ProductsDetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        NotificationCenter.default.addObserver(self, selector: #selector(self.productAmountChangedNotification(notification:)), name: Notification.Name("productAmountChangedInBasket"), object: nil)
+        self.navigationController?.navigationBar.tintColor = .themeColor2
+        
         title = "Product Detail"
         viewModel.delegate = self
         viewModel.fetchProduct(.init())
@@ -52,6 +54,15 @@ class ProductsDetailViewController: UIViewController {
         addToCartButton.isHidden = result
         stepperStackView.isHidden = !result
     }
+    
+    @objc func productAmountChangedNotification(notification: Notification) {
+        guard let item = notification.object as? ProductItem else {return}
+        if item.productId != self.product?.productId {
+            return
+        }
+        labelStepperCounter.text = item.amountInBasket.description
+        self.product?.amountInBasket = item.amountInBasket
+    }
 
     @IBAction func addToCartPressed(_ sender: UIButton) {
         // TODO: add product to basket and show stepper
@@ -63,6 +74,7 @@ class ProductsDetailViewController: UIViewController {
     }
     
     @IBAction func stepperValueChanged(_ sender: UIStepper) {
+        product?.amountInBasket = Int(sender.value)
         guard let product = product else {return}
         labelStepperCounter.text = Int(sender.value).description
         viewModel.fetchUpdateProductAmount(request: .init(productId: product.productId, amount: Int(sender.value)))
@@ -85,7 +97,7 @@ extension ProductsDetailViewController: ProductDetailDelegate {
     
     func didGetProduct(response: ProductsDetailViewModel.FetchProduct.Response) {
         self.product = response.product
-        stepper.value = Double(response.product.amountInBasket ?? 0)
+        stepper.value = Double(response.product.amountInBasket)
         setupUI()
     }
     
@@ -97,7 +109,8 @@ extension ProductsDetailViewController: ProductDetailDelegate {
     }
     
     func didFetchUpdateProductAmount() {
-        // do nothing
+        guard let product = product else {return}
+        NotificationCenter.default.post(name: Notification.Name("productAmountChangedInProductDetail"), object: product)
     }
     
 }

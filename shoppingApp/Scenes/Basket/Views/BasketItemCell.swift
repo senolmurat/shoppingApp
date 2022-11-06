@@ -35,16 +35,17 @@ class BasketItemCell: UITableViewCell {
         labelName.text = item.productName
         labelPrice.text = item.productPrice?.currency
         labelCategory.text = item.productCategory?.capitalized
-        stepper.value = Double(item.amountInBasket ?? 0)
+        stepper.value = Double(item.amountInBasket)
         labelQuantity.text = Int(stepper.value).description
         
         ivProduct.setImage(withPath: item.productImage)
     }
     
     @IBAction func stepperValueChanged(_ sender: Any) {
-        guard let product = product else {return}
+        self.product?.amountInBasket = Int(stepper.value)
+        guard let product = self.product else {return}
         let stepper = sender as! UIStepper
-        labelQuantity.text = String(stepper.value)
+        labelQuantity.text = Int(stepper.value).description
         
         self.delegate?.didStepperValueChanged(value: Int(stepper.value), item: product)
     }

@@ -31,6 +31,7 @@ class MainViewController: UITabBarController {
         let navigationController3 = UINavigationController(rootViewController: profileVC)
 
         self.viewControllers = [navigationController, navigationController2, navigationController3]
+        self.tabBar.tintColor = .themeColor2
         
         guard let items = self.tabBar.items else {
             return

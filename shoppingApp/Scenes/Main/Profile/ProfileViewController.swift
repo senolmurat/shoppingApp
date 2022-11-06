@@ -26,10 +26,11 @@ class ProfileViewController: UIViewController {
     }
     
     private func setup() {
-        title = "Product Detail"
         
         let navBarItem = UIBarButtonItem(image: UIImage(named: "cart"), style: .plain, target: self, action: #selector(self.cartClicked))
+        navBarItem.tintColor = .themeColor2
         self.navigationItem.rightBarButtonItem = navBarItem
+        self.navigationController?.navigationBar.tintColor = .themeColor2
         
         let tap = UITapGestureRecognizer(target: self, action: #selector(logoutStackViewClicked))
         logoutStackView.addGestureRecognizer(tap)
