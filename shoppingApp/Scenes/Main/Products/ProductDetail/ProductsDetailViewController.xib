@@ -65,9 +65,10 @@
                     <subviews>
                         <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l4p-Ea-PtP">
                             <rect key="frame" x="32" y="0.0" width="311" height="0.0"/>
-                            <color key="tintColor" name="themeColor2"/>
+                            <color key="backgroundColor" name="themeColor2"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <state key="normal" title="Button"/>
-                            <buttonConfiguration key="configuration" style="filled">
+                            <buttonConfiguration key="configuration" style="plain">
                                 <attributedString key="attributedTitle">
                                     <fragment content="Add to Cart">
                                         <attributes>
@@ -75,8 +76,10 @@
                                         </attributes>
                                     </fragment>
                                 </attributedString>
-                                <color key="baseBackgroundColor" red="0.33333333329999998" green="0.18039215689999999" blue="0.85098039219999999" alpha="1" colorSpace="calibratedRGB"/>
                             </buttonConfiguration>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="capsule" value="YES"/>
+                            </userDefinedRuntimeAttributes>
                             <connections>
                                 <action selector="addToCartPressed:" destination="-1" eventType="touchUpInside" id="hCf-7j-ppZ"/>
                             </connections>

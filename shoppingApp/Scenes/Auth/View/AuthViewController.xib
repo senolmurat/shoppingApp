@@ -49,7 +49,7 @@
                         </stackView>
                         <segmentedControl opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="255" verticalHuggingPriority="255" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="kc5-Bx-GD2">
                             <rect key="frame" x="113" y="163.33333333333334" width="135" height="32"/>
-                            <color key="backgroundColor" name="themeColor"/>
+                            <color key="backgroundColor" name="themeColor2"/>
                             <segments>
                                 <segment title="Sign In"/>
                                 <segment title="Sign Up"/>
@@ -111,12 +111,19 @@
                             <constraints>
                                 <constraint firstAttribute="height" constant="48" id="6xR-tZ-ILa"/>
                             </constraints>
-                            <color key="tintColor" name="themeColor"/>
                             <state key="normal" title="Button"/>
-                            <buttonConfiguration key="configuration" style="filled" title="Sign In" cornerStyle="capsule">
+                            <buttonConfiguration key="configuration" style="plain" title="Sign In" cornerStyle="capsule">
                                 <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="baseBackgroundColor" name="themeColor"/>
                             </buttonConfiguration>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                    <color key="value" name="themeColor2"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                    <real key="value" value="2"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="capsule" value="YES"/>
+                            </userDefinedRuntimeAttributes>
                             <connections>
                                 <action selector="didTapLoginButton:" destination="-1" eventType="touchUpInside" id="zDx-XV-lF2"/>
                             </connections>
@@ -138,12 +145,12 @@
         </view>
     </objects>
     <resources>
-        <image name="appIcon" width="341.33334350585938" height="341.33334350585938"/>
+        <image name="appIcon" width="250.66667175292969" height="250.66667175292969"/>
         <namedColor name="dustyWhite">
             <color red="0.9649999737739563" green="0.96899998188018799" blue="0.98000001907348633" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <namedColor name="themeColor">
-            <color red="0.43500000238418579" green="0.82400000095367432" blue="0.3449999988079071" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <namedColor name="themeColor2">
+            <color red="0.36500000953674316" green="0.24300000071525574" blue="0.7369999885559082" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

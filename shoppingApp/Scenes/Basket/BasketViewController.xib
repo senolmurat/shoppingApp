@@ -34,11 +34,13 @@
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T2M-04-CTB">
                             <rect key="frame" x="32" y="16.000000000000004" width="273.66666666666669" height="34.333333333333343"/>
-                            <color key="tintColor" name="themeColor2"/>
+                            <color key="backgroundColor" name="themeColor2"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <state key="normal" title="Button"/>
-                            <buttonConfiguration key="configuration" style="filled" title="Confirm" cornerStyle="capsule">
-                                <color key="baseBackgroundColor" name="themeColor2"/>
-                            </buttonConfiguration>
+                            <buttonConfiguration key="configuration" style="plain" title="Confirm" cornerStyle="capsule"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="capsule" value="YES"/>
+                            </userDefinedRuntimeAttributes>
                             <connections>
                                 <action selector="confirmPressed:" destination="-1" eventType="touchUpInside" id="Fue-cO-jgI"/>
                             </connections>
