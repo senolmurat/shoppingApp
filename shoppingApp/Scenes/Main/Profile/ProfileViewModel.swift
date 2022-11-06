@@ -63,7 +63,7 @@ final class ProfileViewModel {
     
     func fetchProfile(_ request: ProfileViewModel.FetchProfile.Request) {
         guard let userId = FirebaseManager.currentAuthUser?.uid else {
-            self.delegate?.didErrorOccurred("Something went wrong. User does not exists")
+            self.delegate?.didErrorOccurred("Something went wrong. Current Logged in User does not exists")
             return
         }
         // TODO: fetch from firebase

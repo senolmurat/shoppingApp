@@ -26,14 +26,11 @@ class ProfileViewController: UIViewController {
     }
     
     private func setup() {
-        title = "Product Detail"
         
-        let navBarItem = UIBarButtonItem()
-        navBarItem.title = "22.0"
-        navBarItem.image = UIImage(named: "cart")
-        navigationItem.rightBarButtonItem = navBarItem
-        
-        
+        let navBarItem = UIBarButtonItem(image: UIImage(named: "cart"), style: .plain, target: self, action: #selector(self.cartClicked))
+        navBarItem.tintColor = .themeColor2
+        self.navigationItem.rightBarButtonItem = navBarItem
+        self.navigationController?.navigationBar.tintColor = .themeColor2
         
         let tap = UITapGestureRecognizer(target: self, action: #selector(logoutStackViewClicked))
         logoutStackView.addGestureRecognizer(tap)
@@ -52,6 +49,12 @@ class ProfileViewController: UIViewController {
         AlertManager.showConfirmation(with: "Are you sure you want to log out ?", in: self) { action in
             self.viewModel.fetchLogout()
         }
+    }
+    
+    @objc private func cartClicked() {
+        let basketVC = BasketViewController()
+        basketVC.hidesBottomBarWhenPushed = true
+        navigationController?.pushViewController(basketVC, animated: true)
     }
 
 }

@@ -21,8 +21,8 @@
             <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="k2Y-xb-WhW">
-                    <rect key="frame" x="0.0" y="47" width="390" height="712.66666666666663"/>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="k2Y-xb-WhW">
+                    <rect key="frame" x="0.0" y="47" width="390" height="696.66666666666663"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="LT0-gX-avz"/>
@@ -30,18 +30,23 @@
                     </connections>
                 </tableView>
                 <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Sec-ja-CZR">
-                    <rect key="frame" x="32" y="775.66666666666663" width="326" height="34.333333333333371"/>
+                    <rect key="frame" x="0.0" y="743.66666666666663" width="390" height="66.333333333333371"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T2M-04-CTB">
-                            <rect key="frame" x="8" y="0.0" width="260.66666666666669" height="34.333333333333336"/>
-                            <color key="tintColor" name="themeColor"/>
+                            <rect key="frame" x="32" y="16.000000000000004" width="273.66666666666669" height="34.333333333333343"/>
+                            <color key="tintColor" name="themeColor2"/>
                             <state key="normal" title="Button"/>
-                            <buttonConfiguration key="configuration" style="filled" title="Confirm" cornerStyle="capsule"/>
+                            <buttonConfiguration key="configuration" style="filled" title="Confirm" cornerStyle="capsule">
+                                <color key="baseBackgroundColor" name="themeColor2"/>
+                            </buttonConfiguration>
+                            <connections>
+                                <action selector="confirmPressed:" destination="-1" eventType="touchUpInside" id="Fue-cO-jgI"/>
+                            </connections>
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fft-GJ-xaq">
-                            <rect key="frame" x="276.66666666666669" y="0.0" width="41.333333333333314" height="34.333333333333336"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <nil key="textColor"/>
+                            <rect key="frame" x="313.66666666666669" y="16.000000000000004" width="44.333333333333314" height="34.333333333333343"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                            <color key="textColor" name="themeColor2"/>
                             <nil key="highlightedColor"/>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -50,19 +55,19 @@
                             </userDefinedRuntimeAttributes>
                         </label>
                     </subviews>
-                    <edgeInsets key="layoutMargins" top="0.0" left="8" bottom="0.0" right="8"/>
+                    <edgeInsets key="layoutMargins" top="16" left="32" bottom="16" right="32"/>
                 </stackView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" name="dustyWhite"/>
             <constraints>
                 <constraint firstItem="k2Y-xb-WhW" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="7IT-SW-4Wc"/>
-                <constraint firstItem="Sec-ja-CZR" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="32" id="Djv-QC-rla"/>
+                <constraint firstItem="Sec-ja-CZR" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Djv-QC-rla"/>
                 <constraint firstItem="k2Y-xb-WhW" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="W1I-I9-d3v"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Sec-ja-CZR" secondAttribute="bottom" id="Zv7-l8-a45"/>
                 <constraint firstItem="k2Y-xb-WhW" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="jJ2-9J-o5A"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Sec-ja-CZR" secondAttribute="trailing" constant="32" id="oPr-nc-0Yp"/>
-                <constraint firstItem="Sec-ja-CZR" firstAttribute="top" secondItem="k2Y-xb-WhW" secondAttribute="bottom" constant="16" id="w6x-6y-LZy"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Sec-ja-CZR" secondAttribute="trailing" id="oPr-nc-0Yp"/>
+                <constraint firstItem="Sec-ja-CZR" firstAttribute="top" secondItem="k2Y-xb-WhW" secondAttribute="bottom" id="w6x-6y-LZy"/>
             </constraints>
             <point key="canvasLocation" x="-38.46153846153846" y="-11.374407582938389"/>
         </view>
@@ -71,8 +76,8 @@
         <namedColor name="dustyWhite">
             <color red="0.9649999737739563" green="0.96899998188018799" blue="0.98000001907348633" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <namedColor name="themeColor">
-            <color red="0.43500000238418579" green="0.82400000095367432" blue="0.3449999988079071" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <namedColor name="themeColor2">
+            <color red="0.36500000953674316" green="0.24300000071525574" blue="0.7369999885559082" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

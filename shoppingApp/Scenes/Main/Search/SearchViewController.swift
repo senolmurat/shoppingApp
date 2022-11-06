@@ -12,21 +12,15 @@ class SearchViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let navBarItem = UIBarButtonItem()
-        navBarItem.title = "22.0"
-        navBarItem.image = UIImage(named: "cart")
-        navigationItem.rightBarButtonItem = navBarItem
+        let navBarItem = UIBarButtonItem(image: UIImage(named: "cart"), style: .plain, target: self, action: #selector(self.cartClicked))
+        navBarItem.tintColor = .themeColor2
+        self.navigationItem.rightBarButtonItem = navBarItem
+        self.navigationController?.navigationBar.tintColor = .themeColor2
     }
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    @objc private func cartClicked() {
+        let basketVC = BasketViewController()
+        basketVC.hidesBottomBarWhenPushed = true
+        navigationController?.pushViewController(basketVC, animated: true)
     }
-    */
-
 }

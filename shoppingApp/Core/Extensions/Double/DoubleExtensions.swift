@@ -16,7 +16,7 @@ extension Double {
         let formatter = NumberFormatter()
         formatter.numberStyle = .currency
         formatter.usesGroupingSeparator = true
-        formatter.maximumFractionDigits = 4
+        formatter.maximumFractionDigits = 2
         formatter.locale = Locale(identifier: "tr_TR")
 
         let number = NSNumber(value: self)

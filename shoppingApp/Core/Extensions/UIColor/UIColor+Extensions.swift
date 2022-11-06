@@ -46,6 +46,7 @@ extension UIColor {
 extension UIColor {
     static var dustyWhite: UIColor { UIColor(colorName: "dustyWhite") }
     static var background: UIColor { UIColor(colorName: "background") }
+    static var themeColor2: UIColor { UIColor(colorName: "themeColor2") }
 }
 
 public extension UIColor {
