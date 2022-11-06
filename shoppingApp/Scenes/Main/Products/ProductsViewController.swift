@@ -27,6 +27,7 @@ class ProductsViewController: UIViewController {
         self.navigationController?.navigationBar.tintColor = .themeColor2
         
         viewModel.delegate = self
+        collectionView.showCollectionViewLoadingIndicator()
         viewModel.fetchProducts(.init())
     }
     
@@ -98,11 +99,13 @@ extension ProductsViewController: UICollectionViewDataSource {
 
 extension ProductsViewController: ProductsDelegate {
     func didErrorOccurred(_ error: Error) {
+        collectionView.restore()
         // TODO: pop back to previous page
         AlertManager.showInfoAlertBox(for: error as NSError, in: self, handler: nil)
     }
     
     func didGetProducts(response: ProductsViewModel.FetchProducts.Response) {
+        collectionView.restore()
         productList = response.items
         collectionView.reloadData()
     }

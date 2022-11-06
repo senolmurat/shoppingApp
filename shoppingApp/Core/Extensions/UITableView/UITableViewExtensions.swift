@@ -27,6 +27,24 @@ extension UITableView {
         self.backgroundView = nil
     }
     
+    func showTableViewFooterLoadingIndicator() {
+        var spinner: UIActivityIndicatorView?
+        DispatchQueue.main.async {
+            if #available(iOS 13.0, *) {
+                spinner = UIActivityIndicatorView(style: .medium)
+            } else {
+                spinner = UIActivityIndicatorView(style: .white)
+            }
+            guard let spinner = spinner else { return }
+            spinner.color = .themeColor2
+            spinner.startAnimating()
+            spinner.frame = CGRect(x: CGFloat(0), y: CGFloat(0), width: self.bounds.width, height: CGFloat(44))
+
+            self.tableFooterView = spinner
+            self.tableFooterView?.isHidden = false
+        }
+    }
+    
     func showTableViewLoadingIndicator() {
         var spinner: UIActivityIndicatorView?
         DispatchQueue.main.async {
@@ -36,15 +54,15 @@ extension UITableView {
                 spinner = UIActivityIndicatorView(style: .white)
             }
             guard let spinner = spinner else { return }
+            spinner.color = .themeColor2
             spinner.startAnimating()
-            spinner.frame = CGRect(x: CGFloat(0), y: CGFloat(0), width: self.bounds.width, height: CGFloat(44))
+            spinner.frame = CGRect(x: CGFloat(0), y: CGFloat(0), width: self.bounds.width, height: CGFloat(100))
 
-            self.tableFooterView = spinner
-            self.tableFooterView?.isHidden = false
+            self.backgroundView = spinner
         }
     }
     
-    func hideTableViewLoadingIndicator() {
+    func hideTableViewFooterLoadingIndicator() {
         DispatchQueue.main.async {
             self.tableFooterView?.isHidden = true
         }
